@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}index{% endblock %}
+{% block content %}
+<div class="panel panel-default">
+  <div class="panel-heading">House Listing</div>
+  {% for area in areas %}
+    <a href="https://www.baidu.com"><span class="label label-info">{{ area[0] }}</span></a>
+  {% endfor %}
+  <div class="panel-body">
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+    <th>名称</th>
+    <th>状态</th>
+    <th>价格</th>
+    <th>性质</th>
+    {#    <th>地址</th>#}
+    <th>户型</th>
+    <th>地区</th>
+
+    {% for house in houses %}
+      <tr>
+        <td>{{ house.house_name }}</td>
+        <td>{{ house.status }}</td>
+        <td>{{ house.price }}</td>
+        <td>{{ house.nature }}</td>
+        {#        <td>{{ house.address }}</td>#}
+        <td>{{ house.hx }}</td>
+        <td>{{ house.area_name }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

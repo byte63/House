@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+
+{% block content %}
+
+{% endblock %}
+
+<nav aria-label="...">
+  <ul class="pager">
+    {% if paginate.has_prev %}
+      <li><a href="/{{ paginate.prev_num }}">Previous</a></li>
+    {% endif %}
+
+    {% if paginate.has_next %}
+      <li><a href="/{{ paginate.next_num }}">Next</a></li>
+    {% endif %}
+  </ul>
+</nav>
+
+</body>
+</html>

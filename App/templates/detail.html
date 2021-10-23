@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}
+  {{ houses[0].house_name }}
+{% endblock %}
+
+{% block content %}
+  <div class="panel panel-default">
+  <div class="panel-body">
+    <p>最近状态: {{ houses[0].status }}</p>
+    <p>地址: {{ houses[0].address }}</p>
+    <p>户型: {{ houses[0].hx }}</p>
+    <p>标签: {{ houses[0].desc }}</p>
+  </div>
+  <table class="table">
+    <th>时间</th>
+    <th>价格</th>
+    <th>区域</th>
+    <th>城市</th>
+    <th>安居客</th>
+
+    {% for house in houses %}
+      <tr>
+        <td>{{ house.create_date }}</td>
+        <td>{{ house.price }}</td>
+        <td>{{ house.area_name }}</td>
+        <td>{{ house.city }}</td>
+        <td><a href="{{ house.detail_url }}" class="button" target="_blank">安居客</a></td>
+      </tr>
+    {% endfor %}
+
+
+  </table>
+  </div>
+{% endblock %}
