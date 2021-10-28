@@ -1,0 +1,2271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Buy Me a Coffee – Give your audience a way to thank you </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <meta name="description"
+        content=" Buy Me a Coffee is the best way for creators and artists to accept support and membership from their fans.">
+  <meta property="og:url" content="http://www.buymeacoffee.com/mhdnauvalazhar">
+  <meta property="og:title" content=" Buy Me a Coffee – Give your audience a way to thank you ">
+  <meta name="og:description"
+        content=" Buy Me a Coffee is the best way for creators and artists to accept support and membership from their fans.">
+  <meta property="og:site_name" content="Buy Me a Coffee">
+  <meta property="og:image" content="https://www.buymeacoffee.com/assets/img/bmc-meta-new/new/apple-icon-120x120.png">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="noodp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@buymeacoffee">
+  <meta property="twitter:title" content=" Buy Me a Coffee – Give your audience a way to thank you ">
+  <meta name="twitter:creator" content="@buymeacoffee">
+  <meta name="twitter:description"
+        content=" Buy Me a Coffee is the best way for creators and artists to accept support and membership from their fans.">
+  <meta property="twitter:image"
+        content="https://www.buymeacoffee.com/assets/img/bmc-meta-new/new/apple-icon-120x120.png">
+  <meta itemprop="name" content=" Buy Me a Coffee – Give your audience a way to thank you ">
+  <meta itemprop="description"
+        content="Buy Me a Coffee is the best way for creators and artists to accept support and membership from their fans.">
+  <meta property="image" content="https://www.buymeacoffee.com/assets/img/bmc-meta-new/new/apple-icon-120x120.png">
+  <link rel="apple-touch-icon-precomposed"
+        href="https://www.buymeacoffee.com/assets/img/bmc-meta-new/new/favicon.png?version=2021.10.27.10.22.19"/>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='house_icon.png') }}" type="image/x-icon">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Spectral:200,300,400,500,600,700,800&display=swap"
+        rel="stylesheet"/>
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://www.buymeacoffee.com/assets/img/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preload" as="font" href="https://www.buymeacoffee.com/assets/build/fonts/fontawesome-webfont.woff2?v=4.7.0"
+        crossorigin>
+  <link rel="preload" as="image" href="https://cdn.buymeacoffee.com/assets/img/signup/signup-bg">
+  <style>@font-face {
+    font-family: "Avenir Light";
+    src: url(https://www.buymeacoffee.com/assets/fonts/edefe737-dc78-4aa3-ad03-3c6f908330ed.eot?#iefix);
+    src: url(https://www.buymeacoffee.com/assets/fonts/edefe737-dc78-4aa3-ad03-3c6f908330ed.eot?#iefix) format("eot"), url(https://www.buymeacoffee.com/assets/fonts/0078f486-8e52-42c0-ad81-3c8d3d43f48e.woff2) format("woff2"), url(https://www.buymeacoffee.com/assets/fonts/908c4810-64db-4b46-bb8e-823eb41f68c0.woff) format("woff"), url(https://www.buymeacoffee.com/assets/fonts/4577388c-510f-4366-addb-8b663bcc762a.ttf) format("truetype"), url(https://www.buymeacoffee.com/assets/fonts/b0268c31-e450-4159-bfea-e0d20e2b5c0c.svg#b0268c31-e450-4159-bfea-e0d20e2b5c0c) format("svg")
+  }
+
+  @font-face {
+    font-family: "Avenir Roman";
+    src: url(https://www.buymeacoffee.com/assets/fonts/57bf7902-79ee-4b31-a327-1bbf59a3d155.eot?#iefix);
+    src: url(https://www.buymeacoffee.com/assets/fonts/57bf7902-79ee-4b31-a327-1bbf59a3d155.eot?#iefix) format("eot"), url(https://www.buymeacoffee.com/assets/fonts/b290e775-e0f9-4980-914b-a4c32a5e3e36.woff2) format("woff2"), url(https://www.buymeacoffee.com/assets/fonts/4b978f72-bb48-46c3-909a-2a8cd2f8819c.woff) format("woff"), url(https://www.buymeacoffee.com/assets/fonts/9bdf0737-f98c-477a-9365-ffc41b9d1285.ttf) format("truetype"), url(https://www.buymeacoffee.com/assets/fonts/15281d0d-e3c2-46e1-94db-cb681e00bfaa.svg#15281d0d-e3c2-46e1-94db-cb681e00bfaa) format("svg")
+  }
+
+  @font-face {
+    font-family: "Avenir Heavy";
+    src: url(https://www.buymeacoffee.com/assets/fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix);
+    src: url(https://www.buymeacoffee.com/assets/fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix) format("eot"), url(https://www.buymeacoffee.com/assets/fonts/d513e15e-8f35-4129-ad05-481815e52625.woff2) format("woff2"), url(https://www.buymeacoffee.com/assets/fonts/61bd362e-7162-46bd-b67e-28f366c4afbe.woff) format("woff"), url(https://www.buymeacoffee.com/assets/fonts/ccd17c6b-e7ed-4b73-b0d2-76712a4ef46b.ttf) format("truetype"), url(https://www.buymeacoffee.com/assets/fonts/20577853-40a7-4ada-a3fb-dd6e9392f401.svg#20577853-40a7-4ada-a3fb-dd6e9392f401) format("svg")
+  }
+
+  @font-face {
+    font-family: "Avenir Book";
+    src: url(https://www.buymeacoffee.com/assets/fonts/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix);
+    src: url(https://www.buymeacoffee.com/assets/fonts/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix) format("eot"), url(https://www.buymeacoffee.com/assets/fonts/065a6b14-b2cc-446e-9428-271c570df0d9.woff2) format("woff2"), url(https://www.buymeacoffee.com/assets/fonts/65d75eb0-2601-4da5-a9a4-9ee67a470a59.woff) format("woff"), url(https://www.buymeacoffee.com/assets/fonts/c70e90bc-3c94-41dc-bf14-caa727c76301.ttf) format("truetype"), url(https://www.buymeacoffee.com/assets/fonts/0979215b-3a1b-4356-9c76-e90fa4551f1d.svg#0979215b-3a1b-4356-9c76-e90fa4551f1d) format("svg")
+  }
+
+  @font-face {
+    font-family: "Avenir Oblique";
+    src: url(https://www.buymeacoffee.com/assets/fonts/1e9b2738-9316-4b0c-97c0-5423b69ea147.eot?#iefix);
+    src: url(https://www.buymeacoffee.com/assets/fonts/1e9b2738-9316-4b0c-97c0-5423b69ea147.eot?#iefix) format("eot"), url(https://www.buymeacoffee.com/assets/fonts/1a7173fa-062b-49ad-9915-bc57d3bfc1f5.woff2) format("woff2"), url(https://www.buymeacoffee.com/assets/fonts/cdda031e-26e9-4269-83d1-5a218caa10db.woff) format("woff"), url(https://www.buymeacoffee.com/assets/fonts/6d1ce413-19e7-4b43-b328-6cdedc58b35a.ttf) format("truetype"), url(https://www.buymeacoffee.com/assets/fonts/33fac8ae-e7a5-4903-9ac1-c09a59b4c61d.svg#33fac8ae-e7a5-4903-9ac1-c09a59b4c61d) format("svg")
+  }
+
+  @font-face {
+    font-family: "Avenir Black Oblique";
+    src: url(https://www.buymeacoffee.com/assets/fonts/4030caeb-d266-4d36-ac58-a3bb7a5b1bfa.eot?#iefix);
+    src: url(https://www.buymeacoffee.com/assets/fonts/4030caeb-d266-4d36-ac58-a3bb7a5b1bfa.eot?#iefix) format("eot"), url(https://www.buymeacoffee.com/assets/fonts/a2477e08-09d9-4d4b-97a9-23a1e22cb44c.woff2) format("woff2"), url(https://www.buymeacoffee.com/assets/fonts/19d12bba-92b1-43ad-9bab-cd36a4195c2a.woff) format("woff"), url(https://www.buymeacoffee.com/assets/fonts/5ba5a010-7470-4d9d-8a49-2920dc1be1f8.ttf) format("truetype"), url(https://www.buymeacoffee.com/assets/fonts/6d4a6a8c-ef50-422f-8456-88d479e0b23d.svg#6d4a6a8c-ef50-422f-8456-88d479e0b23d) format("svg")
+  }
+
+  @font-face {
+    font-family: "Avenir Medium";
+    src: url(https://www.buymeacoffee.com/assets/fonts/17b90ef5-b63f-457b-a981-503bb7afe3c0.woff2) format("woff2"), url(https://www.buymeacoffee.com/assets/fonts/c9aeeabd-dd65-491d-b4be-3e0db9ae47a0.woff) format("woff")
+  }
+
+  @font-face {
+    font-family: "Avenir Black";
+    src: url(https://www.buymeacoffee.com/assets/fonts/Avenir-Black.otf)
+  }
+
+  .fs-16 {
+    font-size: 16px
+  }</style>
+  <link rel="preload" href="https://www.buymeacoffee.com/assets/fonts/graphik/GraphikBold.otf" as="font" type="font/otf"
+        crossorigin>
+  <link rel="preload" href="https://www.buymeacoffee.com/assets/fonts/graphik/GraphikSemibold.otf" as="font"
+        type="font/otf" crossorigin>
+  <link rel="preload" href="https://www.buymeacoffee.com/assets/fonts/graphik/GraphikMedium.otf" as="font"
+        type="font/otf" crossorigin>
+  <link rel="preload" href="https://www.buymeacoffee.com/assets/fonts/graphik/GraphikRegular.otf" as="font"
+        type="font/otf" crossorigin>
+  <link rel="preload"
+        href="https://www.buymeacoffee.com/assets/fonts/helvatica/ec6281a0-c9c4-4477-a360-156acd53093f.woff2" as="font"
+        type="font/woff2" crossorigin>
+  <link rel="preload"
+        href="https://www.buymeacoffee.com/assets/fonts/helvatica/f9c5199e-a996-4c08-9042-1eb845bb7495.woff2" as="font"
+        type="font/woff2" crossorigin>
+  <link rel="preload"
+        href="https://www.buymeacoffee.com/assets/fonts/helvatica/240c57a0-fdce-440d-9ce3-85e0cb56f470.woff2" as="font"
+        type="font/woff2" crossorigin>
+  <link rel="preload"
+        href="https://www.buymeacoffee.com/assets/fonts/helvatica/08b57253-2e0d-4c12-9c57-107f6c67bc49.woff2" as="font"
+        type="font/woff2" crossorigin>
+  <link rel="preload"
+        href="https://www.buymeacoffee.com/assets/fonts/helvatica/800da3b0-675f-465f-892d-d76cecbdd5b1.woff2" as="font"
+        type="font/woff2" crossorigin>
+  <link rel="preload"
+        href="https://www.buymeacoffee.com/assets/fonts/helvatica/7b415a05-784a-4a4c-8c94-67e9288312f5.woff" as="font"
+        type="font/woff" crossorigin>
+  <link rel="preload"
+        href="https://www.buymeacoffee.com/assets/fonts/helvatica/7e42a406-9133-48c0-a705-4264ac520b43.woff2" as="font"
+        type="font/woff2" crossorigin>
+  <style>@font-face {
+    font-family: "Graphik 900";
+    src: url(https://www.buymeacoffee.com/assets/fonts/graphik/GraphikBold.otf) format("opentype");
+    font-display: swap
+  }
+
+  @font-face {
+    font-family: "Graphik 800";
+    src: url(https://www.buymeacoffee.com/assets/fonts/graphik/GraphikSemibold.otf) format("opentype");
+    font-display: swap
+  }
+
+  @font-face {
+    font-family: "Graphik 600";
+    src: url(https://www.buymeacoffee.com/assets/fonts/graphik/GraphikMedium.otf) format("opentype");
+    font-display: swap
+  }
+
+  @font-face {
+    font-family: "Graphik 400";
+    src: url(https://www.buymeacoffee.com/assets/fonts/graphik/GraphikRegular.otf) format("opentype");
+    font-display: swap
+  }
+
+  @font-face {
+    font-family: "Helvetica Neue Ultra light";
+    src: url(https://www.buymeacoffee.com/assets/fonts/helvatica/ec6281a0-c9c4-4477-a360-156acd53093f.woff2) format("woff2"), url(https://www.buymeacoffee.com/assets/fonts/helvatica/11066b40-10f7-4123-ba58-d9cbf5e89ceb.woff) format("woff");
+    font-display: swap
+  }
+
+  @font-face {
+    font-family: "Helvetica Neue light";
+    src: url(https://www.buymeacoffee.com/assets/fonts/helvatica/f9c5199e-a996-4c08-9042-1eb845bb7495.woff2) format("woff2"), url(https://www.buymeacoffee.com/assets/fonts/helvatica/2a34f1f8-d701-4949-b12d-133c1c2636eb.woff) format("woff");
+    font-display: swap
+  }
+
+  @font-face {
+    font-family: "Helvetica Neue Medium";
+    src: url(https://www.buymeacoffee.com/assets/fonts/helvatica/240c57a0-fdce-440d-9ce3-85e0cb56f470.woff2) format("woff2"), url(https://www.buymeacoffee.com/assets/fonts/helvatica/7802e576-2ffa-4f22-a409-534355fbea79.woff) format("woff");
+    font-display: swap
+  }
+
+  @font-face {
+    font-family: "Helvetica Neue Roman";
+    src: url(https://www.buymeacoffee.com/assets/fonts/helvatica/08b57253-2e0d-4c12-9c57-107f6c67bc49.woff2) format("woff2"), url(https://www.buymeacoffee.com/assets/fonts/helvatica/08edde9d-c27b-4731-a27f-d6cd9b01cd06.woff) format("woff");
+    font-display: swap
+  }
+
+  @font-face {
+    font-family: "Helvetica Neue Roman Bold";
+    src: url(https://www.buymeacoffee.com/assets/fonts/helvatica/800da3b0-675f-465f-892d-d76cecbdd5b1.woff2) format("woff2"), url(https://www.buymeacoffee.com/assets/fonts/helvatica/7b415a05-784a-4a4c-8c94-67e9288312f5.woff) format("woff");
+    font-display: swap
+  }
+
+  @font-face {
+    font-family: "Helvetica Neue Heavy";
+    src: url(https://www.buymeacoffee.com/assets/fonts/helvatica/7e42a406-9133-48c0-a705-4264ac520b43.woff2) format("woff2"), url(https://www.buymeacoffee.com/assets/fonts/helvatica/7e42a406-9133-48c0-a705-4264ac520b43.woff) format("woff");
+    font-display: swap
+  }</style>
+  <link rel="stylesheet" href="https://www.buymeacoffee.com/assets/build/css/others-build.min.2021.10.27.10.22.19.css">
+  <style>.logo-text-img img {
+    width: 240px;
+    height: 48px
+  }
+
+  .christmas-logo {
+    margin-top: -7px !important;
+    height: 50px !important;
+    width: 205px !important
+  }
+
+  @media (max-width: 767px) {
+    .logo-text-img img {
+      width: 168px
+    }
+
+    .christmas-logo {
+      width: 160px !important;
+      margin-top: -3px !important
+    }
+  }
+
+  @media (max-width: 380px) {
+    .logo-text img {
+      width: 154px !important
+    }
+
+    .christmas-logo {
+      width: 160px !important;
+      margin-top: -3px !important
+    }
+  }</style>
+  <style>.hdr-user-img {
+    border: 1px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15)
+  }
+
+  .bmc-open-btn svg {
+    display: none
+  }
+
+  @media (max-width: 767px) {
+    .bmc-open-btn svg {
+      display: unset
+    }
+  }</style>
+  <style>.m-l-16 {
+    margin-left: 16px
+  }</style>
+  <style>.digit-wrapper {
+    border: 2px solid rgba(14, 9, 35, .1);
+    border-radius: 8px;
+    height: 60px
+  }
+
+  .digit-input {
+    margin-right: 8px;
+    border-radius: 0;
+    height: 38px;
+    background: none;
+    border: none;
+    border-right: 1px solid rgba(13, 12, 34, .05)
+  }
+
+  .digit-input:last-child {
+    border-right: 0;
+    margin-right: 0
+  }
+
+  .open-modal-bg.p-b-wrap {
+    opacity: 1 !important;
+    z-index: 999
+  }
+
+  .ov-flw-scrl {
+    overflow-y: scroll
+  }
+
+  .ln-h-25 {
+    line-height: 25px
+  }
+
+  .open-modal-bg.p-b-wrap {
+    opacity: 1 !important;
+    z-index: 9999
+  }
+
+  .m-r-16 {
+    margin-right: 16px
+  }
+
+  .m-t-32 {
+    margin-top: 32px
+  }
+
+  .fs-16 {
+    font-size: 16px
+  }
+
+  .auth-option {
+    background: rgba(0, 0, 0, .05)
+  }
+
+  .auth-prev-arrow {
+    position: absolute;
+    left: 32px;
+    top: 32px
+  }
+
+  input.auth-option:hover {
+    background-color: rgba(13, 12, 34, .08)
+  }
+
+  input.auth-option:focus, input.auth-option:active {
+    background-color: #fff;
+    border-color: rgba(0, 0, 0, .25);
+    -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, .05);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, .05)
+  }
+
+  .btn-black:hover {
+    background-color: rgba(0, 0, 0, .65) !important
+  }
+
+  .auth-signup {
+    padding: 70px 0 110px
+  }
+
+  @media (max-width: 900px) {
+    .auth-wrapper {
+      width: 85%
+    }
+
+    .auth-width {
+      margin-top: 30px
+    }
+  }
+
+  @media (max-width: 767px) {
+    .auth-signup {
+      padding: 70px 0 70px !important
+    }
+  }</style>
+  <style>.error-gif {
+    width: 300px
+  }
+
+  @media (max-width: 1366px) {
+    .error-main-wrap {
+      width: 70%
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .error-main-wrap {
+      width: 90%
+    }
+
+    .error-gif {
+      width: 140px;
+      margin: auto
+    }
+  }
+
+  @media (max-width: 767px) {
+    .xs-mg-0-auto {
+      margin: 0 auto
+    }
+  }</style>
+  <script>!function (f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function () {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = !0;
+    n.version = '2.0';
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = !0;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s)
+  }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2719847418303428');
+  fbq('track', 'PageView');</script>
+  <noscript>
+    <img height="1" width="1" src="https://www.facebook.com/tr?id=2719847418303428&ev=PageView&noscript=1"
+         data-pagespeed-url-hash="3892257706"/>
+  </noscript>
+  <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+    var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-WWDFL8L');</script>
+  <script data-pagespeed-no-defer>(function () {
+    function f(a, b, d) {
+      if (a.addEventListener) a.addEventListener(b, d, !1); else if (a.attachEvent) a.attachEvent("on" + b, d); else {
+        var c = a["on" + b];
+        a["on" + b] = function () {
+          d.call(this);
+          c && c.call(this)
+        }
+      }
+    };window.pagespeed = window.pagespeed || {};
+    var g = window.pagespeed;
+
+    function k(a) {
+      this.g = [];
+      this.f = 0;
+      this.h = !1;
+      this.j = a;
+      this.i = null;
+      this.l = 0;
+      this.b = !1;
+      this.a = 0
+    }
+
+    function l(a, b) {
+      var d = b.getAttribute("data-pagespeed-lazy-position");
+      if (d) return parseInt(d, 0);
+      var d = b.offsetTop, c = b.offsetParent;
+      c && (d += l(a, c));
+      d = Math.max(d, 0);
+      b.setAttribute("data-pagespeed-lazy-position", d);
+      return d
+    }
+
+    function m(a, b) {
+      var d, c, e;
+      if (!a.b && (0 == b.offsetHeight || 0 == b.offsetWidth)) return !1;
+      a:if (b.currentStyle) c = b.currentStyle.position; else {
+        if (document.defaultView && document.defaultView.getComputedStyle && (c = document.defaultView.getComputedStyle(b, null))) {
+          c = c.getPropertyValue("position");
+          break a
+        }
+        c = b.style && b.style.position ? b.style.position : ""
+      }
+      if ("relative" == c) return !0;
+      e = 0;
+      "number" == typeof window.pageYOffset ? e = window.pageYOffset : document.body && document.body.scrollTop ? e = document.body.scrollTop : document.documentElement &&
+          document.documentElement.scrollTop && (e = document.documentElement.scrollTop);
+      d = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+      c = e;
+      e += d;
+      var h = b.getBoundingClientRect();
+      h ? (e = h.top - d, c = h.bottom) : (h = l(a, b), d = h + b.offsetHeight, e = h - e, c = d - c);
+      return e <= a.f && 0 <= c + a.f
+    }
+
+    k.prototype.m = function (a) {
+      p(a);
+      var b = this;
+      window.setTimeout(function () {
+        var d = a.getAttribute("data-pagespeed-lazy-src");
+        if (d) if ((b.h || m(b, a)) && -1 != a.src.indexOf(b.j)) {
+          var c = a.parentNode, e = a.nextSibling;
+          c && c.removeChild(a);
+          a.c && (a.getAttribute = a.c);
+          a.removeAttribute("onload");
+          a.tagName && "IMG" == a.tagName && g.CriticalImages && f(a, "load", function () {
+            g.CriticalImages.checkImageForCriticality(this);
+            b.b && (b.a--, b.a || g.CriticalImages.checkCriticalImages())
+          });
+          a.removeAttribute("data-pagespeed-lazy-src");
+          a.removeAttribute("data-pagespeed-lazy-replaced-functions");
+          c && c.insertBefore(a, e);
+          if (c = a.getAttribute("data-pagespeed-lazy-srcset")) a.srcset = c, a.removeAttribute("data-pagespeed-lazy-srcset");
+          a.src = d
+        } else b.g.push(a)
+      }, 0)
+    };
+    k.prototype.loadIfVisibleAndMaybeBeacon = k.prototype.m;
+    k.prototype.s = function () {
+      this.h = !0;
+      q(this)
+    };
+    k.prototype.loadAllImages = k.prototype.s;
+
+    function q(a) {
+      var b = a.g, d = b.length;
+      a.g = [];
+      for (var c = 0; c < d; ++c) a.m(b[c])
+    }
+
+    function t(a, b) {
+      return a.a ? null != a.a(b) : null != a.getAttribute(b)
+    }
+
+    k.prototype.u = function () {
+      for (var a = document.getElementsByTagName("img"), b = 0, d; d = a[b]; b++) t(d, "data-pagespeed-lazy-src") && p(d)
+    };
+    k.prototype.overrideAttributeFunctions = k.prototype.u;
+
+    function p(a) {
+      t(a, "data-pagespeed-lazy-replaced-functions") || (a.c = a.getAttribute, a.getAttribute = function (a) {
+        "src" == a.toLowerCase() && t(this, "data-pagespeed-lazy-src") && (a = "data-pagespeed-lazy-src");
+        return this.c(a)
+      }, a.setAttribute("data-pagespeed-lazy-replaced-functions", "1"))
+    }
+
+    g.o = function (a, b) {
+      function d() {
+        if (!(c.b && a || c.i)) {
+          var b = 200;
+          200 < (new Date).getTime() - c.l && (b = 0);
+          c.i = window.setTimeout(function () {
+            c.l = (new Date).getTime();
+            q(c);
+            c.i = null
+          }, b)
+        }
+      }
+
+      var c = new k(b);
+      g.lazyLoadImages = c;
+      f(window, "load", function () {
+        c.b = !0;
+        c.h = a;
+        c.f = 200;
+        if (g.CriticalImages) {
+          for (var b = 0, d = document.getElementsByTagName("img"), r = 0, n; n = d[r]; r++) -1 != n.src.indexOf(c.j) && t(n, "data-pagespeed-lazy-src") && b++;
+          c.a = b;
+          c.a || g.CriticalImages.checkCriticalImages()
+        }
+        q(c)
+      });
+      b.indexOf("data") && ((new Image).src = b);
+      f(window,
+          "scroll", d);
+      f(window, "resize", d)
+    };
+    g.lazyLoadInit = g.o;
+  })();
+
+  pagespeed.lazyLoadInit(true, "/pagespeed_static/1.JiBnMqyl6S.gif");
+  </script>
+</head>
+<body class="body-main-wrap ">
+<noscript>
+  <meta HTTP-EQUIV="refresh" content="0;url='http://www.buymeacoffee.com/mhdnauvalazhar?PageSpeed=noscript'"/>
+  <style><!--
+  table, div, span, font, p {
+    display: none
+  }
+
+  --></style>
+  <div style="display:block">Please click <a
+          href="http://www.buymeacoffee.com/mhdnauvalazhar?PageSpeed=noscript">here</a> if you are not redirected within
+    a few seconds.
+  </div>
+</noscript>
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWDFL8L" height="0" width="0"
+          style="display:none;visibility:hidden"></iframe>
+</noscript>
+<input type="hidden" id="login-page" value="0"/>
+<input type="hidden" id="signup-page" value="0"/>
+<input type="hidden" value="" id="redirect-with-offer-link"/>
+<input type="hidden" value="" id="redirect-login-form-slug"/>
+<input type="hidden" value="" id="from_page"/>
+<input type="hidden" value="0" id="is_home_papage"/>
+<div class="bmc-main-wrapper">
+  <input type="hidden" value="" id="fill-login-form-email"/>
+  <input type="hidden" value="" id="redirect-with-offer-link"/>
+  <input type="hidden" value="" id="redirect-login-form-slug"/>
+  <input type="hidden" value="" id="from_page"/>
+  <div class="header-wrapper">
+    <div class="bmc-header  flex flex-v-center w-100 z-10 p-relative">
+      <div class="bmc-header-wrap w-100">
+        <div class="header-main-wrap">
+          <div class="flex f-v-center creator-desk-part p-0">
+            <div class="head-logo p-relative flex flex-vert-center logged-in">
+              <svg t="1635402895130" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                   xmlns="http://www.w3.org/2000/svg" p-id="2541" width="200" height="200">
+                <path d="M758.8 317.8h-71.6v59.6l71.6 55zM528.3 632.2c-3.1 5.1-8.6 8.2-14.5 8.2s-11.4-3.1-14.5-8.2C485.2 608.8 465.5 596 444 596c-28.1 0-54.2 22.1-61.9 52.5-5.7 22.3-12.5 100.2 131.7 181.8 144.3-81.6 137.5-159.6 131.8-181.8-7.8-30.4-33.8-52.5-62-52.5-21.5-0.1-41.1 12.8-55.3 36.2z"
+                      fill="#FDB9D0" p-id="2542"></path>
+                <path d="M908.2 547.2l-115.8-89c0.2-1.1 0.4-2.3 0.4-3.4v-154c0-9.4-7.6-17-17-17H670.3c-9.4 0-17 7.6-17 17v50.5l-129.1-99.2c-6.1-4.7-14.6-4.7-20.7 0l-384 295.1c-5.8 4.4-8.1 12-5.7 18.9 2.3 6.9 8.8 11.5 16.1 11.5H235v309.3c0 40.2 32.7 73 73 73h411.8c40.2 0 73-32.7 73-73V577.6h105.1c7.3 0 13.7-4.6 16.1-11.5 2.3-6.9 0-14.5-5.8-18.9z m-221-229.4h71.6v114.6l-71.6-55v-59.6z m71.6 569.1c0 21.5-17.5 39.1-39.1 39.1H307.9c-21.5 0-39.1-17.5-39.1-39.1V569.1l245-185.6 245 185.6v317.8z m22.7-343.2l-257.4-195c-6.1-4.6-14.4-4.6-20.5 0l-257.4 195h-66.5l334.1-256.8L848 543.7h-66.5z"
+                      fill="#3EBAC4" p-id="2543"></path>
+                <path d="M444 562c-44.1 0-83.1 32.1-94.8 78-6.2 24.3-7.4 62.9 21.7 109.3 26.3 42 71.7 80.7 134.8 115.2 2.5 1.4 5.3 2.1 8.1 2.1s5.6-0.7 8.1-2.1c63.1-34.4 108.5-73.2 134.8-115.2 29.1-46.4 27.9-85.1 21.7-109.3-11.7-45.9-50.7-78-94.8-78-26.6 0-50.7 11.5-69.8 32.8-19.1-21.3-43.2-32.8-69.8-32.8z m201.6 86.4c5.7 22.3 12.5 100.2-131.8 181.8-144.2-81.6-137.4-159.6-131.7-181.8 7.8-30.4 33.8-52.5 61.9-52.5 21.5 0 41.1 12.9 55.3 36.2 3.1 5.1 8.6 8.2 14.5 8.2s11.4-3.1 14.5-8.2c14.2-23.4 33.8-36.2 55.3-36.2 28.2 0 54.2 22.1 62 52.5zM714.9 248.6c2.5 1.4 5.3 2.1 8.1 2.1s5.6-0.7 8.1-2.1c36.6-20 63-42.6 78.5-67.3 17.8-28.3 16.9-52.2 13.1-67.2-7.4-29.1-32.3-49.4-60.5-49.4-14.4 0-28 5.5-39.2 15.5-11.2-10-24.8-15.5-39.2-15.5-28.2 0-53 20.3-60.5 49.4-3.8 15-4.7 38.9 13.1 67.2 15.5 24.7 41.9 47.3 78.5 67.3z m-58.7-126.1c3.5-13.8 15.1-23.9 27.6-23.9 9.5 0 18.1 5.8 24.7 16.8 3.1 5.1 8.6 8.2 14.5 8.2s11.4-3.1 14.5-8.2c6.7-11 15.2-16.8 24.7-16.8 12.5 0 24.1 10.1 27.6 23.9 5.7 22.5-9.1 57.9-66.8 91.7-57.7-33.8-72.5-69.2-66.8-91.7z"
+                      fill="#3EBAC4" p-id="2544"></path>
+              </svg>
+              <a href="{{ url_for('house.listing', page=1) }}" class="p-absolute ab-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="header-btn-wrap">
+          <a href="javascript:void(null)" class="header-btn home-btn open-login-modal auth-link-title">Log in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input type="hidden" id="csrf" name="bmc_csrf_token" value="5c383e975622e7c5c125008131104b18">
+  <div id="myLoginModal" class="modal open-modal-bg p-b-wrap ov-flw-scrl auth-modal-wrap" role="dialog"
+       style="display: none;">
+    <div class="auth-backdrop w-100"></div>
+    <div class="flex flex-both-center min-h-100vh xs-w-100 modal-on-mobile auth-modal">
+      <div class="login-main-wrap bg-fff pd-64 xxs-pd-32 xs-w-100 br-r-12 modal-on-mobile-rad p-relative">
+        <div class="close-auth-modal p-absolute" data-dismiss="modal">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="16" fill="#0D0C22" fill-opacity="0.05"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M20.5141 11.4804C20.1392 11.1055 19.5314 11.1055 19.1565 11.4804L15.9953 14.6416L12.8341 11.4804L12.7612 11.4145C12.3842 11.107 11.828 11.1289 11.4765 11.4804C11.1016 11.8553 11.1016 12.4631 11.4765 12.838L14.6377 15.9992L11.4765 19.1604L11.4106 19.2333C11.1031 19.6104 11.125 20.1666 11.4765 20.518C11.8514 20.8929 12.4592 20.8929 12.8341 20.518L15.9953 17.3569L19.1565 20.518L19.2294 20.5839C19.6065 20.8915 20.1627 20.8695 20.5141 20.518C20.889 20.1431 20.889 19.5353 20.5141 19.1604L17.353 15.9992L20.5141 12.838L20.58 12.7651C20.8876 12.3881 20.8656 11.8319 20.5141 11.4804Z"
+                  fill="#0D0C22" fill-opacity="0.3"/>
+            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="11" y="11" width="10" height="10">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M20.5141 11.4804C20.1392 11.1055 19.5314 11.1055 19.1565 11.4804L15.9953 14.6416L12.8341 11.4804L12.7612 11.4145C12.3842 11.107 11.828 11.1289 11.4765 11.4804C11.1016 11.8553 11.1016 12.4631 11.4765 12.838L14.6377 15.9992L11.4765 19.1604L11.4106 19.2333C11.1031 19.6104 11.125 20.1666 11.4765 20.518C11.8514 20.8929 12.4592 20.8929 12.8341 20.518L15.9953 17.3569L19.1565 20.518L19.2294 20.5839C19.6065 20.8915 20.1627 20.8695 20.5141 20.518C20.889 20.1431 20.889 19.5353 20.5141 19.1604L17.353 15.9992L20.5141 12.838L20.58 12.7651C20.8876 12.3881 20.8656 11.8319 20.5141 11.4804Z"
+                    fill="white"/>
+            </mask>
+            <g mask="url(#mask0)"></g>
+          </svg>
+        </div>
+        <div class="av-black color-222 text-fs-32 ln-h-50 align-center auth-modal-title">Welcome back.</div>
+        <div class="flex flex-sp-btw pd-t-32 c-auto">
+          <div class="align-center p-relative social-login-each">
+            <a id="google-login-page" href="https://app.buymeacoffee.com/auth/redirect/google">
+              <div class="w-h-64 flex flex-both-center bg-color-2121-05 br-r-50p">
+                <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.7083 11.8497C22.7083 11.0623 22.6444 10.2707 22.5082 9.49609H11.5829V13.9565H17.8393C17.5797 15.395 16.7455 16.6676 15.524 17.4762V20.3704H19.2566C21.4485 18.353 22.7083 15.3737 22.7083 11.8497Z"
+                        fill="#4285F4"/>
+                  <path d="M11.583 23.1666C14.7069 23.1666 17.3414 22.1409 19.2609 20.3703L15.5283 17.4762C14.4899 18.1827 13.1492 18.5828 11.5872 18.5828C8.56539 18.5828 6.00324 16.5441 5.08393 13.8032H1.23218V16.7867C3.19848 20.6981 7.20345 23.1666 11.583 23.1666Z"
+                        fill="#34A853"/>
+                  <path d="M5.07963 13.8033C4.59443 12.3648 4.59443 10.8071 5.07963 9.36852V6.38501H1.23213C-0.410711 9.65793 -0.410711 13.5139 1.23213 16.7869L5.07963 13.8033Z"
+                        fill="#FBBC04"/>
+                  <path d="M11.583 4.58457C13.2343 4.55904 14.8303 5.18042 16.0263 6.32105L19.3333 3.01408C17.2393 1.04777 14.4601 -0.033268 11.583 0.000780559C7.20345 0.000780559 3.19848 2.4693 1.23218 6.38489L5.07967 9.3684C5.99473 6.62323 8.56114 4.58457 11.583 4.58457Z"
+                        fill="#EA4335"/>
+                </svg>
+              </div>
+              <div class="av-medium text-fs-16 clr-dark mg-t-16">Google</div>
+            </a>
+          </div>
+          <div class="align-center p-relative social-login-each">
+            <a id="fb-login-page" href="https://app.buymeacoffee.com/auth/redirect/facebook">
+              <div class="w-h-64 flex flex-both-center bg-color-2121-05 br-r-50p">
+                <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.316 0.00440392L8.49561 0C5.32698 0 3.27927 2.04452 3.27927 5.20895V7.61063H0.443482C0.198435 7.61063 0 7.80396 0 8.04243V11.5222C0 11.7607 0.198662 11.9538 0.443482 11.9538H3.27927V20.7343C3.27927 20.9728 3.47771 21.1659 3.72276 21.1659H7.42266C7.66771 21.1659 7.86614 20.9726 7.86614 20.7343V11.9538H11.1818C11.4269 11.9538 11.6253 11.7607 11.6253 11.5222L11.6267 8.04243C11.6267 7.92793 11.5798 7.81827 11.4968 7.73724C11.4138 7.65621 11.3006 7.61063 11.183 7.61063H7.86614V5.5747C7.86614 4.59615 8.10576 4.09939 9.41561 4.09939L11.3156 4.09872C11.5604 4.09872 11.7588 3.90539 11.7588 3.66714V0.435988C11.7588 0.197956 11.5606 0.00484431 11.316 0.00440392Z"
+                        fill="#3B5998"/>
+                </svg>
+              </div>
+              <div class="av-medium text-fs-16 clr-dark mg-t-16">Facebook</div>
+            </a>
+          </div>
+          <div class="align-center p-relative social-login-each">
+            <a id="fb-login-page" href="https://app.buymeacoffee.com/auth/redirect/apple">
+              <div class="w-h-64 flex flex-both-center bg-color-2121-05 br-r-50p">
+                <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.68377 24C3.11185 23.9794 0.157227 16.6879 0.157227 12.9745C0.157227 6.90873 4.70762 5.58077 6.4613 5.58077C7.25162 5.58077 8.09551 5.89112 8.83984 6.16577C9.36034 6.35734 9.89865 6.55511 10.198 6.55511C10.3772 6.55511 10.7995 6.38688 11.1724 6.23927C11.9675 5.92272 12.957 5.5293 14.1091 5.5293C14.1112 5.5293 14.114 5.5293 14.116 5.5293C14.9763 5.5293 17.5849 5.71811 19.1532 8.0733L19.5206 8.62534L18.9919 9.0243C18.2366 9.5942 16.8585 10.6338 16.8585 12.6931C16.8585 15.132 18.4192 16.07 19.169 16.5211C19.5 16.7202 19.8426 16.9255 19.8426 17.3746C19.8426 17.6678 17.5025 23.9636 14.1043 23.9636C13.2728 23.9636 12.685 23.7137 12.1666 23.4933C11.642 23.2701 11.1895 23.0779 10.4417 23.0779C10.0627 23.0779 9.58341 23.2571 9.07599 23.4473C8.38257 23.7061 7.5977 24 6.70712 24H6.68377Z"
+                        fill="black"/>
+                  <path d="M14.4691 0C14.5576 3.19106 12.2754 5.40488 9.996 5.26603C9.62039 2.71945 12.2752 0 14.4691 0Z"
+                        fill="black"/>
+                </svg>
+              </div>
+              <div class="av-medium text-fs-16 clr-dark mg-t-16">Apple</div>
+            </a>
+          </div>
+          <div class="align-center p-relative social-login-each">
+            <a id="google-login-page" href="https://app.buymeacoffee.com/auth/redirect/twitter">
+              <div class="w-h-64 flex flex-both-center bg-color-2121-05 br-r-50p">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0)">
+                    <path d="M24 4.5585C23.1075 4.95 22.1565 5.2095 21.165 5.3355C22.185 4.7265 22.9635 3.7695 23.3295 2.616C22.3785 3.183 21.3285 3.5835 20.2095 3.807C19.3065 2.8455 18.0195 2.25 16.6155 2.25C13.8915 2.25 11.6985 4.461 11.6985 7.1715C11.6985 7.5615 11.7315 7.9365 11.8125 8.2935C7.722 8.094 4.1025 6.1335 1.671 3.147C1.2465 3.8835 0.9975 4.7265 0.9975 5.634C0.9975 7.338 1.875 8.8485 3.183 9.723C2.3925 9.708 1.617 9.4785 0.96 9.117C0.96 9.132 0.96 9.1515 0.96 9.171C0.96 11.562 2.6655 13.548 4.902 14.0055C4.5015 14.115 4.065 14.1675 3.612 14.1675C3.297 14.1675 2.979 14.1495 2.6805 14.0835C3.318 16.032 5.127 17.4645 7.278 17.511C5.604 18.8205 3.4785 19.6095 1.1775 19.6095C0.774 19.6095 0.387 19.5915 0 19.542C2.1795 20.9475 4.7625 21.75 7.548 21.75C16.602 21.75 21.552 14.25 21.552 7.749C21.552 7.5315 21.5445 7.3215 21.534 7.113C22.5105 6.42 23.331 5.5545 24 4.5585Z"
+                          fill="#03A9F4"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="av-medium text-fs-16 clr-dark mg-t-16">Twitter</div>
+            </a>
+          </div>
+        </div>
+        <div class="av-roman text-fs-16 clr-dark-05 align-center mg-t-32 block-bf-af p-relative">Or login with email
+        </div>
+        <div class="mg-t-32" id="check-user-form">
+          <div class="input-each">
+            <input type="text"
+                   class="bmc-input-box bmc-input-box-h48 text-fs-16 clr-dark av-roman w-100 bmc-input-field req-field request-on-enter-login "
+                   data-name="email address" data-error-type="required" id="login-email" placeholder="Email"
+                   name="email" value="">
+            <div class="bmc-error text-fs-14 av-roman mg-t-8 error-login-email error-element" style="display: none">
+            </div>
+          </div>
+          <div class="input-each show-for-ctr" style="display: none">
+            <input type="password"
+                   class="bmc-input-box bmc-input-box-h48 text-fs-16 clr-dark av-roman w-100 mg-t-16 request-on-enter-login"
+                   data-name="password" data-error-type="required" id="login-password" placeholder="Password"
+                   name="password" value="">
+            <div class="bmc-error text-fs-14 av-roman mg-t-8 error-login-password error-element"
+                 style="display: none"></div>
+          </div>
+          <div class="captcha-wrapper show-for-ctr" style="display: none">
+            <input type="hidden" id="captcha-fail-login" value="1"/>
+            <div id="captcha_element_login" class="m-t-20"></div>
+            <p class="captcha-err bmc-error text-fs-14 av-roman mg-t-8 error-element" style="display:none"></p>
+          </div>
+          <div class="input-each show-otp-field" style="display: none">
+            <input type="number"
+                   class="bmc-input-box bmc-input-box-h48 text-fs-16 clr-dark av-roman w-100 mg-t-16 request-on-enter-login"
+                   data-name="otp" data-error-type="mg_custom" id="login-otp" placeholder="Paste login code" name="otp"
+                   value="">
+            <div class="bmc-error text-fs-14 av-roman mg-t-8 error-element" style="display: none"></div>
+            <div class="av-roman text-fs-16 ln-h-22 clr-grey mg-t-12">We just sent you a temporary login code. please
+              check your inbox.
+            </div>
+          </div>
+          <button class="bmc-yellow-btn w-100 br-r-57 color-2121 av-heavy text-fs-16 ln-h-22 mg-t-32 p-relative flex flex-both-center dark-loader c-pointer"
+                  data-form="check-user" id="login-btn" onclick="checkUsertype(this)">
+            <span>Continue with email</span>
+            <div class="btn-loader p-absolute" style="display: none">
+              <svg class="btn-dot-loader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                   style="margin:auto;display:block;" width="48px" height="48px" viewBox="0 0 100 100"
+                   preserveAspectRatio="xMidYMid">
+                <g transform="translate(25 50)">
+                  <circle cx="0" cy="0" r="10" fill="#222222">
+                    <animateTransform attributeName="transform" type="scale" begin="-0.4444444444444444s"
+                                      calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0"
+                                      keyTimes="0;0.5;1" dur="1.3333333333333333s"
+                                      repeatCount="indefinite"></animateTransform>
+                  </circle>
+                </g>
+                <g transform="translate(50 50)">
+                  <circle cx="0" cy="0" r="10" fill="#222222">
+                    <animateTransform attributeName="transform" type="scale" begin="-0.2222222222222222s"
+                                      calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0"
+                                      keyTimes="0;0.5;1" dur="1.3333333333333333s"
+                                      repeatCount="indefinite"></animateTransform>
+                  </circle>
+                </g>
+                <g transform="translate(75 50)">
+                  <circle cx="0" cy="0" r="10" fill="#222222">
+                    <animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline"
+                                      keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1"
+                                      dur="1.3333333333333333s" repeatCount="indefinite"></animateTransform>
+                  </circle>
+                </g>
+              </svg>
+            </div>
+          </button>
+          <div class="align-center">
+            <div class="av-roman text-fs-16 ln-h-22 clr-grey mg-t-24 align-center text-decoration-ul c-pointer dark-loader show-for-supp p-relative dis-inline-block"
+                 style="display: none">
+              <div class="flex flex-both-center">
+                <span>Resend email</span>
+                <div class="circle-loader sm-circle-loader br-r-50p p-absolute" style="display:none;">
+                  <div class="checkedmark" style="display:none;">
+                    <svg style="margin-top: -1px;" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                            fill="white"/>
+                      <path d="M15.6454 8.25772C15.9891 7.91409 16.5462 7.91409 16.8898 8.25772C17.212 8.57988 17.2321 9.08969 16.9502 9.4353L16.8898 9.50213L10.6497 15.7423C10.3275 16.0644 9.81773 16.0846 9.47212 15.8027L9.40529 15.7423L6.25772 12.5947C5.91409 12.2511 5.91409 11.6939 6.25772 11.3503C6.57988 11.0282 7.08969 11.008 7.4353 11.2899L7.50213 11.3503L10.0271 13.875L15.6454 8.25772Z"
+                            fill="#FF813F"/>
+                      ,
+                      <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="8" width="12" height="8">
+                        <path d="M15.6454 8.25772C15.9891 7.91409 16.5462 7.91409 16.8898 8.25772C17.212 8.57988 17.2321 9.08969 16.9502 9.4353L16.8898 9.50213L10.6497 15.7423C10.3275 16.0644 9.81773 16.0846 9.47212 15.8027L9.40529 15.7423L6.25772 12.5947C5.91409 12.2511 5.91409 11.6939 6.25772 11.3503C6.57988 11.0282 7.08969 11.008 7.4353 11.2899L7.50213 11.3503L10.0271 13.875L15.6454 8.25772Z"
+                              fill="white"/>
+                      </mask>
+                      <g mask="url(#mask0)"></g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="align-center">
+            <div class="av-roman text-fs-16 ln-h-22 clr-grey mg-t-24 text-decoration-ul c-pointer show-if-pass-worng dis-inline-block"
+                 onclick="resetPassword(this)" style="display: none">Forgot password?
+            </div>
+          </div>
+          <div class="av-roman text-fs-16 ln-h-22 clr-grey mg-t-12 align-center reset-email-not" style="display:none;">
+            If an account with that email address exists, you will receive a link to reset your password.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input type="hidden" id="never-close" data-type="" value="0">
+  <input type="hidden" id="otp-sending-modal" value="0">
+  <div class="flex w-100 flex-both-center" style="height: calc(100vh - 60px);">
+    <div class="w-55 mg-0-a flex flex-sp-btw xs-flex-r-wrap error-main-wrap xs-w-100 xs-align-center">
+      <div class="flex flex-v-center xs-w-100">
+        <div class="xs-w-100 xs-pd-16">
+          <div class="text-fs-64 clr-dark av-heavy xs-text-fs-36">Oh no!</div>
+          <div class="text-fs-18 clr-dark av-roman mg-t-4 ln-h-30">We can't seem to find the page you're looking for.
+          </div>
+          <div class="text-fs-18 clr-dark av-roman ln-h-30">It returned a 404 error.</div>
+          <div class="text-fs-18 clr-dark av-roman ln-h-30 mg-t-32">Here are some helpful links instead:</div>
+          <div class="mg-t-24">
+            <a class="inline-flex text-center flex-align-center br-r-47 bg-dark-05-h md-bmc-btn av-heavy text-fs-16 mg-r-8 xs-mg-b-8"
+               href="https://www.buymeacoffee.com/login"><span class="pd-l-8 pd-r-8">Login</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="xs-mg-0-auto">
+        <script data-pagespeed-no-defer>(function () {
+          for (var g = "function" == typeof Object.defineProperties ? Object.defineProperty : function (b, c, a) {
+            if (a.get || a.set) throw new TypeError("ES3 does not support getters and setters.");
+            b != Array.prototype && b != Object.prototype && (b[c] = a.value)
+          }, h = "undefined" != typeof window && window === this ? this : "undefined" != typeof global && null != global ? global : this, k = ["String", "prototype", "repeat"], l = 0; l < k.length - 1; l++) {
+            var m = k[l];
+            m in h || (h[m] = {});
+            h = h[m]
+          }
+          var n = k[k.length - 1], p = h[n], q = p ? p : function (b) {
+            var c;
+            if (null == this) throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");
+            c = this + "";
+            if (0 > b || 1342177279 < b) throw new RangeError("Invalid count value");
+            b |= 0;
+            for (var a = ""; b;) if (b & 1 && (a += c), b >>>= 1) c += c;
+            return a
+          };
+          q != p && null != q && g(h, n, {configurable: !0, writable: !0, value: q});
+          var t = this;
+
+          function u(b, c) {
+            var a = b.split("."), d = t;
+            a[0] in d || !d.execScript || d.execScript("var " + a[0]);
+            for (var e; a.length && (e = a.shift());) a.length || void 0 === c ? d[e] ? d = d[e] : d = d[e] = {} : d[e] = c
+          };
+
+          function v(b) {
+            var c = b.length;
+            if (0 < c) {
+              for (var a = Array(c), d = 0; d < c; d++) a[d] = b[d];
+              return a
+            }
+            return []
+          };
+
+          function w(b) {
+            var c = window;
+            if (c.addEventListener) c.addEventListener("load", b, !1); else if (c.attachEvent) c.attachEvent("onload", b); else {
+              var a = c.onload;
+              c.onload = function () {
+                b.call(this);
+                a && a.call(this)
+              }
+            }
+          };var x;
+
+          function y(b, c, a, d, e) {
+            this.h = b;
+            this.j = c;
+            this.l = a;
+            this.f = e;
+            this.g = {
+              height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
+              width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+            };
+            this.i = d;
+            this.b = {};
+            this.a = [];
+            this.c = {}
+          }
+
+          function z(b, c) {
+            var a, d, e = c.getAttribute("data-pagespeed-url-hash");
+            if (a = e && !(e in b.c)) if (0 >= c.offsetWidth && 0 >= c.offsetHeight) a = !1; else {
+              d = c.getBoundingClientRect();
+              var f = document.body;
+              a = d.top + ("pageYOffset" in window ? window.pageYOffset : (document.documentElement || f.parentNode || f).scrollTop);
+              d = d.left + ("pageXOffset" in window ? window.pageXOffset : (document.documentElement || f.parentNode || f).scrollLeft);
+              f = a.toString() + "," + d;
+              b.b.hasOwnProperty(f) ? a = !1 : (b.b[f] = !0, a = a <= b.g.height && d <= b.g.width)
+            }
+            a && (b.a.push(e), b.c[e] = !0)
+          }
+
+          y.prototype.checkImageForCriticality = function (b) {
+            b.getBoundingClientRect && z(this, b)
+          };
+          u("pagespeed.CriticalImages.checkImageForCriticality", function (b) {
+            x.checkImageForCriticality(b)
+          });
+          u("pagespeed.CriticalImages.checkCriticalImages", function () {
+            A(x)
+          });
+
+          function A(b) {
+            b.b = {};
+            for (var c = ["IMG", "INPUT"], a = [], d = 0; d < c.length; ++d) a = a.concat(v(document.getElementsByTagName(c[d])));
+            if (a.length && a[0].getBoundingClientRect) {
+              for (d = 0; c = a[d]; ++d) z(b, c);
+              a = "oh=" + b.l;
+              b.f && (a += "&n=" + b.f);
+              if (c = !!b.a.length) for (a += "&ci=" + encodeURIComponent(b.a[0]), d = 1; d < b.a.length; ++d) {
+                var e = "," + encodeURIComponent(b.a[d]);
+                131072 >= a.length + e.length && (a += e)
+              }
+              b.i && (e = "&rd=" + encodeURIComponent(JSON.stringify(B())), 131072 >= a.length + e.length && (a += e), c = !0);
+              C = a;
+              if (c) {
+                d = b.h;
+                b = b.j;
+                var f;
+                if (window.XMLHttpRequest) f = new XMLHttpRequest; else if (window.ActiveXObject) try {
+                  f = new ActiveXObject("Msxml2.XMLHTTP")
+                } catch (r) {
+                  try {
+                    f = new ActiveXObject("Microsoft.XMLHTTP")
+                  } catch (D) {
+                  }
+                }
+                f && (f.open("POST", d + (-1 == d.indexOf("?") ? "?" : "&") + "url=" + encodeURIComponent(b)), f.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"), f.send(a))
+              }
+            }
+          }
+
+          function B() {
+            var b = {}, c;
+            c = document.getElementsByTagName("IMG");
+            if (!c.length) return {};
+            var a = c[0];
+            if (!("naturalWidth" in a && "naturalHeight" in a)) return {};
+            for (var d = 0; a = c[d]; ++d) {
+              var e = a.getAttribute("data-pagespeed-url-hash");
+              e && (!(e in b) && 0 < a.width && 0 < a.height && 0 < a.naturalWidth && 0 < a.naturalHeight || e in b && a.width >= b[e].o && a.height >= b[e].m) && (b[e] = {
+                rw: a.width,
+                rh: a.height,
+                ow: a.naturalWidth,
+                oh: a.naturalHeight
+              })
+            }
+            return b
+          }
+
+          var C = "";
+          u("pagespeed.CriticalImages.getBeaconData", function () {
+            return C
+          });
+          u("pagespeed.CriticalImages.Run", function (b, c, a, d, e, f) {
+            var r = new y(b, c, a, e, f);
+            x = r;
+            d && w(function () {
+              window.setTimeout(function () {
+                A(r)
+              }, 0)
+            })
+          });
+        })();
+        pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon', 'http://www.buymeacoffee.com/mhdnauvalazhar', 'zcWdRB6kXv', false, false, 'mzTTTsqxPpA');</script>
+        <img class="error-gif mg-l-32 xs-mg-l-0" src="https://www.buymeacoffee.com/assets/img/404-gif-.gif"
+             alt="error gif" data-pagespeed-url-hash="3937487937"
+             onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">var bmc_url = "https://www.buymeacoffee.com/";
+  var payments_url = "https://app.buymeacoffee.com/";</script>
+  <script src="https://www.buymeacoffee.com/assets/build/js/other-js-build.min.2021.10.27.10.22.19.js"></script>
+  <script>$('[data-toggle="popover"]').popover();
+  $('[data-toggle="popover"]').popover({trigger: "hover"});
+  $(document).on('keypress', '.prevent-navigation-input', function (e) {
+    $('#any_change').val(1);
+  });
+  $(document).on('keypress', '.note-editable', function (e) {
+    $('#any_change').val(1);
+  });
+  $('.prevent-navigation').click(function (event) {
+    if ($('#any_change').val() == 1) {
+      $("#warningModal").modal();
+      if (event.target.nodeName != 'A') return;
+      let href = event.target.getAttribute('href');
+      $('#warning-confirm').find('.ab-link').attr('href', href);
+      return false;
+    }
+  });</script>
+  <script>nLazy();
+  img_lazy_load();
+  $('[data-toggle="popover"]').popover();
+
+  function img_lazy_load() {
+    $("img.laazy").each(function () {
+      var $this = $(this);
+      var attr_href = $this.data('src')
+      $this.unveil(300);
+    });
+  }</script>
+  <script>$(window).on('load', function () {
+    setTimeout(function () {
+      if ($('.change-log-btn').find('.Canny_BadgeContainer').length > 0) {
+        $('.social-icon-wrapper-canny').addClass('active');
+      }
+    }, 3000);
+    $('.change-log-btn').click(function () {
+      $('.social-icon-wrapper-canny').removeClass('active');
+    });
+  });</script>
+  <script>$(document).on('keyup change input', '[chars]', function (event) {
+    var $elem = $(this), value = $elem.val(), regReplace, preset = {
+      'only-numbers': '0-9',
+      'numbers': '0-9\\s',
+      'only-letters': 'A-Za-z',
+      'letters': 'A-Za-z\\s',
+      'email': '\\wÑñ@._\\-',
+      'alpha-numeric': '\\w\\s',
+      'latin-alpha-numeric': '\\w\\sÑñáéíóúüÁÉÍÓÚÜ'
+    }, filter = preset[$elem.attr('chars')] || $elem.attr('chars');
+    regReplace = new RegExp('[^' + filter + ']', 'ig');
+    $elem.val(value.replace(regReplace, ''));
+  });</script>
+  <script>$(document).ready(function () {
+    window.intercomSettings = {
+      app_id: "zkn2qu6k",
+      custom_launcher_selector: '.open_intercom',
+      alignment: 'right',
+      hide_default_launcher: true
+    };
+    (function () {
+      var w = window;
+      var ic = w.Intercom;
+      if (typeof ic === "function") {
+        ic('reattach_activator');
+        ic('update', w.intercomSettings);
+      } else {
+        var d = document;
+        var i = function () {
+          i.c(arguments);
+        };
+        i.q = [];
+        i.c = function (args) {
+          i.q.push(args);
+        };
+        w.Intercom = i;
+        var l = function () {
+          var s = d.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = 'https://widget.intercom.io/widget/zkn2qu6k';
+          var x = d.getElementsByTagName('script')[0];
+          x.parentNode.insertBefore(s, x);
+        };
+        if (w.attachEvent) {
+          w.attachEvent('onload', l);
+        } else {
+          w.addEventListener('load', l, false);
+        }
+      }
+    })();
+  });</script>
+  <script>$(document).on('click', '.humberger-menu', function () {
+    $('.new-mobile-menu').toggleClass('active');
+    $('.slug-check-main-wrap').toggleClass('zIndex-mob');
+    $('.new-home-header').toggleClass('mob-fixed');
+    $('.close-svg').toggle();
+    $('.hamburger-svg').toggle();
+  });
+
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function () {
+      var context = this, args = arguments;
+      var later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };</script>
+  <input type="hidden" id="enable_login_captcha" value="">
+  <script type="text/javascript">var authOb = new Auth();
+  var login_url = '';
+  var loginType = '';
+  axios.defaults.withCredentials = true;
+  axios.defaults.baseURL = 'https://app.buymeacoffee.com/';
+  const enableLoginCaptcha = $('#enable_login_captcha').val() != '';
+
+  function loginWithAuthToken(accessToken, successCallback, errorCallback) {
+    $.ajax({
+      dataType: 'json', url: "https://www.buymeacoffee.com/auth/login-with-token", success: function (response) {
+        $('#csrf').val(response.csrfHash);
+        if (successCallback) {
+          successCallback(response);
+        }
+      }, error: function (error) {
+        errorCallback(error);
+      }, data: {access_token: accessToken, bmc_csrf_token: $('#csrf').val()}, type: 'POST'
+    });
+  }
+
+  function loginSuccess(result) {
+    var from_page = $('#from_page').val();
+    var redirect_link = $('#redirect-login-form-slug').val();
+    var offer_slug_link = $('#redirect-with-offer-link').val();
+    var redirect_to_post = $('#redirect_signin').val();
+    var loginUrl = null;
+    if (redirect_link != '') {
+      if (offer_slug_link != '') {
+        loginUrl = redirect_link + '?subscription=true&offer=' + offer_slug_link;
+      } else {
+        loginUrl = redirect_link + '?subscription=true';
+      }
+    } else if (redirect_to_post != undefined && redirect_to_post != '') {
+      setTimeout(function () {
+        window.location = redirect_to_post
+      }, 100);
+    } else {
+      if (from_page != '') {
+        setTimeout(function () {
+          window.location = from_page;
+        }, 100);
+      } else if (result.user_role == 1 || result.user_role == 3) {
+        loginUrl = 'dashboard';
+      } else {
+        loginUrl = 'home';
+      }
+    }
+    if (loginUrl != null) {
+      setTimeout(function () {
+        window.location = 'https://www.buymeacoffee.com/' + loginUrl
+      }, 100);
+    } else {
+      location.reload();
+    }
+  }
+
+  function showGenericError() {
+    if (enableLoginCaptcha) {
+      grecaptcha.reset();
+      $('#captcha-fail-login').val(1);
+    }
+    authOb.showError(formElement, [{'email': ['Error while trying to login, please try again.']}], thisElement);
+    grecaptcha.reset();
+    $('#captcha-fail-login').val(1);
+    $('#captcha-fail-signup').val(1);
+  }
+
+  $(document).ready(function () {
+    var field = 'message';
+    var url = window.location.href;
+    if (url.indexOf('?' + field + '=') != -1) {
+      $('.error-login-email').show();
+    }
+    getCsrfToken();
+  });
+  $('.request-on-enter-login').keyup(function (e) {
+    if (e.keyCode == 13) {
+      var funName = $('#login-btn').attr("onclick");
+      if (funName == 'checkUsertype(this)') {
+        checkUsertype($('#login-btn'));
+      } else if (funName == 'loginUSer(this,"login")') {
+        loginUSer($('#login-btn'), "login");
+      } else {
+        checkSlugAvailabe($('#signup-complete'));
+      }
+    }
+  });
+
+  async function checkUsertype(element) {
+    $('.captcha-err').html('').hide();
+    authOb.formValidation(element).then(async function () {
+      let url = 'https://app.buymeacoffee.com/auth/email/login';
+      let type = 'POST';
+      startLoader(thisElement, 'new');
+      axios.post('auth/email/login', data).then(afterUseCheck).catch(handleError);
+    }).catch(function () {
+    });
+  }
+
+  async function getCsrfToken() {
+    await axios.get('/sanctum/csrf-cookie');
+  }
+
+  function handleError(error) {
+    if (enableLoginCaptcha) {
+      grecaptcha.reset();
+      $('#captcha-fail-login').val(1);
+    }
+    let response = error.response ? error.response.data : null;
+    if (response && response.errors) {
+      authOb.showError(formElement, response.errors, thisElement);
+    } else {
+      showGenericError();
+    }
+  }
+
+  var onloadCallbackLogin = function () {
+    var widgetId_login = grecaptcha.render('captcha_element_login', {
+      'sitekey': '6Lc99-kUAAAAAC2iO1UxMAd47MeT1qBaRADP8G1v',
+      callback: function () {
+        $('#captcha-fail-login').val(0);
+        $('.captcha-err').html('Failed to verify captcha');
+        resetLoader(thisElement);
+      }
+    });
+    $('#captcha_element_login').attr('data-widget-id', widgetId_login);
+  }
+
+  function afterUseCheck(result) {
+    if (result.data.errors) {
+      authOb.showError(formElement, result.errors, thisElement);
+    } else {
+      resetLoader(thisElement);
+      if (result.data.has_password) {
+        if (enableLoginCaptcha) {
+          $('.captcha-err').html('').hide();
+        }
+        $('.show-otp-field').hide().find('input[type=number]').removeClass('req-field bmc-input-field');
+        $('.show-for-ctr').slideDown(200).find('input[type=password]').addClass('req-field bmc-input-field');
+        $('.show-if-pass-worng').show();
+        $('#login-password').trigger('focus');
+        login_url = 'https://app.buymeacoffee.com/auth/login';
+      } else {
+        login_url = 'auth/otp/login';
+        shotOtpField();
+        $('.show-for-supp').show().attr('onclick', 'sendVerificationCode("resend")');
+      }
+      thisElement.attr('onclick', 'loginUSer(this,"login")').find('span').text('Login');
+    }
+  }
+
+  function loginUSer(element, otp_type) {
+    if (enableLoginCaptcha) {
+      $('.captcha-err').html('').hide();
+    }
+    customErrorMsg = 'Paste the verification code here.';
+    authOb.formValidation(element).then(function () {
+      let type = 'POST';
+      if (otp_type == 'verify') {
+        data.is_signup = 1;
+      }
+      startLoader(thisElement, 'new');
+      if (enableLoginCaptcha && login_url == 'auth/login') {
+        data.client_response = grecaptcha.getResponse($('#captcha_element_login').attr('data-widget-id'));
+        if ($('#captcha-fail-login').val() == 0) {
+          axios.post(login_url, data).then(afterUserLogin).catch(handleError);
+        } else {
+          $('.captcha-err').html('Failed to verify captcha').show();
+          resetLoader(thisElement);
+        }
+      } else {
+        startLoader(thisElement, 'new');
+        axios.post(login_url, data).then(afterUserLogin).catch(handleError);
+      }
+    }).catch();
+  }
+
+  function afterUserLogin(result) {
+    if (result.data.access_token) {
+      loginWithAuthToken(result.data.access_token, loginSuccess, showGenericError);
+    } else if (result.data.otp_login) {
+      sendVerificationCode('verify');
+    } else {
+      showGenericError();
+    }
+  }
+
+  function sendVerificationCode(otp_type) {
+    if (otp_type == 'resend') {
+      thisElement = $('.show-for-supp');
+      loginType = loginType;
+      btnLoaderType = 'old';
+    } else {
+      loginType = otp_type;
+      btnLoaderType = 'new';
+    }
+    startLoader(thisElement, btnLoaderType);
+    login_url = 'auth/otp/login';
+    axios.post('auth/otp/generate', {email: $('#login-email').val(),}).then(afterOtpEmail).catch(handleError);
+  }
+
+  function afterOtpEmail(result) {
+    resetLoader(thisElement);
+    $('.show-for-supp').show().attr('onclick', 'sendVerificationCode("resend")');
+    if (result.status == 200) {
+      if (loginType == 'verify') {
+        login_url = 'auth/otp/login';
+        $('#login-email').parents('.input-each').removeClass('bmc-input-field').hide();
+        thisElement.attr('onclick', 'loginUSer(this,"verify")')
+      }
+      shotOtpField();
+    } else {
+      authOb.showError(formElement, result.errors, thisElement);
+    }
+  }
+
+  function shotOtpField() {
+    $('.show-for-ctr').hide().find('input[type=password]').removeClass('req-field bmc-input-field');
+    $('.show-otp-field').slideDown(200).find('input[type=number]').addClass('req-field bmc-input-field');
+    $('#login-otp').trigger('focus');
+  }
+
+  function resetPassword(element) {
+    $(element).hide();
+    $(formElement).find(".bmc-input-field").each(function (index, node) {
+      $(node).removeClass('req-field bmc-input-field').parents('.input-each').hide();
+    });
+    $('#login-email').attr('readonly', true).parents('.input-each').show();
+    thisElement.attr('onclick', 'resetEmail(this)').find('span').text('Send reset link');
+  }
+
+  function resetEmail(element) {
+    startLoader(thisElement, 'new');
+    axios.post('auth/forgot_password', {'email': $('#login-email').val()}).then(afterSendEmail).catch(handleError);
+  }
+
+  function afterSendEmail(result) {
+    resetLoader(thisElement);
+    if (result.status == 200) {
+      $('#login-email').remove();
+      thisElement.remove();
+      $('.reset-email-not').show();
+    } else {
+      authOb.showError(formElement, result.data.errors, thisElement);
+    }
+  }</script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"rayId":"6a51234d995639f0","token":"a87d3a9031fa484e873aa0aa54a82de8","version":"2021.10.0","si":100}'></script>
+</body>
+</html>
+<script>function never_allow_to_close(type) {
+  $('#never-close').val(1);
+  $('#never-close').attr('data-type', type);
+  $('.back-from-chooserole').hide();
+  if (type == 'login') {
+    $('.back-from-chooserole').hide();
+    $('#myLoginModal').find('.auth-close-btn').hide();
+  } else {
+    $('.back-from-chooserole').hide();
+    $('#mySignupModal').find('.auth-close-btn').hide();
+  }
+}
+
+$('#myLoginModal').on('show.bs.modal', function (event) {
+  var prefill_email = $('#fill-login-form-email').val();
+  $('#login-email').val(prefill_email);
+  $('#from_page').val(window.location.href);
+  $('#otp-sending-modal').val(0);
+});
+$('#mySignupModal').on('show.bs.modal', function (event) {
+  img_lazy_load();
+  $('#signupPageSlider').carousel(0);
+  $('#otp-sending-modal').val(0);
+});
+
+function checkIfUserExist() {
+  var csrfHash = $('input[name=bmc_csrf_token]').val();
+  $('.email-span').text('');
+  $('.email-tip').hide();
+  var email = $('#login-email').val();
+  if (email == '') {
+    $('.email-span').text('Please enter the email address');
+    $('.email-tip').show();
+  } else {
+    $('#login-email').val(email);
+    $('#reset-email').val(email);
+    $.ajax({
+      dataType: 'json',
+      url: "https://www.buymeacoffee.com/auth/validate_email",
+      beforeSend: beforeEmailCheck,
+      success: afterEmailCheck,
+      data: {email: email, bmc_csrf_token: csrfHash},
+      type: 'POST'
+    });
+  }
+}
+
+function beforeEmailCheck() {
+  $('.check-btn .circle-loader').show();
+  $('.check-btn span').hide();
+  removeErrors(error);
+}
+
+function afterEmailCheck(data) {
+  $('#csrf').val(data.csrfHash);
+  if (data.status == 'OK') {
+    setTimeout(function () {
+      $('.check-btn .circle-loader').toggleClass('load-complete');
+      setTimeout(function () {
+        $('.check-btn .checkedmark').toggle();
+      }, 150);
+      setTimeout(function () {
+        $('.check-btn .circle-loader').hide();
+        $('.check-btn span').show();
+      }, 800);
+    }, 1000);
+    showStep(1, 2, 'login');
+  } else {
+    $('.check-btn .circle-loader').hide();
+    $('.check-btn span').show();
+    error = data.errors;
+    showErrors(error);
+  }
+}
+
+$(document).on('keyup keypress', '.digit-input', function (e) {
+  var key = event.keyCode || event.charCode;
+  if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+    return false;
+  } else if (key == 8) {
+    if ($(this).val().length == 0) {
+      $(this).prev('.digit-input').focus();
+    }
+  } else {
+    if ($(this).val().length == 1) {
+      event.preventDefault();
+      $(this).next('.digit-input').focus();
+    }
+  }
+});
+$(".digit-input").bind("paste", function (e) {
+  var type = $(this).data('type');
+  var pastedData = e.originalEvent.clipboardData.getData('text');
+  var num_array = [];
+  num_array = pastedData.toString(10).replace(/\D/g, '0').split('').map(Number);
+  for (var a = 0; a < 6; a++) {
+    var pos = a + 1;
+    event.preventDefault();
+    if (type == 'login') {
+      $('#otp-digit-' + pos).val(num_array[a]);
+    } else {
+      $('#signup-otp-digit-' + pos).val(num_array[a]);
+    }
+  }
+});
+
+function showStepLogin(from, to) {
+  $('.step-' + from).hide();
+  $('.step-' + to).show();
+  $('.login-error-tip').hide();
+  $('.login-error-span').text('');
+}
+
+function sendMagicLink(type) {
+  $('.email-tip').hide();
+  $('.email-span').text('');
+  var csrfHash = $('input[name=bmc_csrf_token]').val();
+  var email = $('#login-email').val();
+  var otp_status_modal = $('#otp-sending-modal').val();
+  var otp_status = $('#otp-sending').val();
+  if (email == '') {
+    $('.email-tip').show();
+    $('.email-span').text('Please enter the email address');
+  } else {
+    if (otp_status_modal == 0 || otp_status == 0) {
+      if ($('#otp-send').val() == 0 || type == 'resend') {
+        $('#otp-sending-modal').val(1);
+        $('#otp-sending').val(1);
+        $.ajax({
+          dataType: 'json',
+          url: "https://www.buymeacoffee.com/auth/generate_otp",
+          beforeSend: beforeOtpEmail(type),
+          success: afterOtpEmail,
+          data: {email: email, bmc_csrf_token: csrfHash},
+          type: 'POST'
+        });
+      } else {
+        showStep(1, 3, 'login');
+        never_allow_to_close('login');
+        $('.login-btn .circle-loader').hide();
+        $('.login-btn span').show();
+      }
+    }
+  }
+
+  function beforeOtpEmail(type) {
+    if (type == 'resend') {
+      $('#resend-btn').addClass('rotating');
+    }
+  }
+
+  function afterOtpEmail(result) {
+    $('#otp-sending-modal').val(0);
+    $('#otp-sending').val(0);
+    $('#csrf').val(result.csrfHash);
+    setTimeout(() => {
+      $('#resend-btn').removeClass('rotating');
+    }, 3000);
+    if (result.status == 'OK') {
+      $('.login-btn .circle-loader').hide();
+      $('.login-btn span').show();
+      showStep(1, 3, 'login');
+      never_allow_to_close('login');
+      $('.digit-wrapper .digit-input:first-child').focus();
+      $('#otp-send').val(1);
+      if (type == 'resend') {
+        $('.resend-otp-wrapper').remove();
+        $('.opt-sent-text').show();
+        setTimeout(() => {
+          $('.opt-sent-text').text('');
+        }, 1300);
+      }
+    } else if (result.status == 'FAIL') {
+      $('.email-tip').show();
+      $('.email-span').text(result.errors.email);
+    }
+  }
+}
+
+function saveDigitCode() {
+  var csrfHash = $('input[name=bmc_csrf_token]').val();
+  var email = $('#login-email').val();
+  var otp = '' + $('#otp-digit-1').val() + $('#otp-digit-2').val() + $('#otp-digit-3').val() + $('#otp-digit-4').val() + $('#otp-digit-5').val() + $('#otp-digit-6').val();
+  $.ajax({
+    dataType: 'json',
+    url: "https://www.buymeacoffee.com/auth/login_with_otp",
+    beforeSend: beforeSaveOtp,
+    success: afterSaveOtp,
+    data: {email: email, otp: otp, is_signup: 1, bmc_csrf_token: csrfHash},
+    type: 'POST'
+  });
+}
+
+function beforeSaveOtp() {
+  $('.saveotp-btn .circle-loader').show();
+  $('.saveotp-btn span').hide();
+  $('.otp-error-span').text('');
+  $('.otp-error-tip').hide();
+}
+
+function afterSaveOtp(result) {
+  $('#csrf').val(result.csrfHash);
+  if (result.status == 'LOGIN_SUCCESS') {
+    setTimeout(function () {
+      $('.saveotp-btn .circle-loader').toggleClass('load-complete');
+      setTimeout(function () {
+        $('.saveotp-btn .checkedmark').toggle();
+      }, 150);
+      setTimeout(function () {
+        $('.saveotp-btn .circle-loader').hide();
+        $('.saveotp-btn span').show();
+        if (result.user_role == 1 || result.user_role == 3) {
+          window.location = "https://www.buymeacoffee.com/dashboard";
+        } else {
+          window.location = "https://www.buymeacoffee.com/home";
+        }
+      }, 800);
+    }, 1000);
+  } else if (result.status == 'INVALID_OTP') {
+    $('.otp-error-span').text('Invalid OTP');
+    $('.otp-error-tip').show();
+    $('.saveotp-btn .circle-loader').hide();
+    $('.saveotp-btn span').show();
+  }
+}
+
+$(document).keydown(function (event) {
+  if (event.keyCode == 13) {
+    if ($('#myLoginModal').css('display') == 'block' && $('#login-email').val() != '' && $('#password').val() != '') {
+      login();
+    }
+  }
+});
+$('#project_slug').keydown(function (event) {
+  if (event.keyCode == 32) {
+    $('.project_slug-tip').show();
+    $('.project_slug-span').text('Username cannot contain spaces and special characters!');
+  } else {
+    $('.project_slug-tip').hide();
+    $('.project_slug-span').text('');
+  }
+});
+
+function login() {
+  var csrfHash = $('input[name=bmc_csrf_token]').val();
+  $('.error-tip').hide();
+  $('.signup-alert').text('');
+  var email = $('#login-email').val();
+  var password = $('#password').val();
+  if (email == '') {
+    $('.email-tip').show();
+    $('.email-span').text('Please enter the email address');
+  }
+  if (password == '') {
+    $('.password-tip').show();
+    $('.password-span').text('Please enter your password');
+  }
+  if (email && password) {
+    $('#reset-email').val(email);
+    $.ajax({
+      dataType: 'json',
+      url: "https://www.buymeacoffee.com/auth/login_validate",
+      beforeSend: beforeLogin,
+      success: afterLogin,
+      data: {email: email, password: password, bmc_csrf_token: csrfHash},
+      type: 'POST'
+    });
+  }
+}
+
+function beforeLogin() {
+  $('.login-btn .circle-loader').show();
+  $('.login-btn span').hide();
+  $('.login-error-tip').hide();
+  $('.login-error-span').text('');
+}
+
+function afterLogin(result) {
+  $('#csrf').val(result.csrfHash);
+  if (result.status == 'LOGIN_SUCCESS') {
+    setTimeout(function () {
+      setTimeout(function () {
+        var from_page = $('#from_page').val();
+        var redirect_link = $('#redirect-login-form-slug').val();
+        var offer_slug_link = $('#redirect-with-offer-link').val();
+        var redirect_to_post = $('#redirect_signin').val();
+        if (redirect_link != '') {
+          if (offer_slug_link != '') {
+            setTimeout(function () {
+              window.location = 'https://www.buymeacoffee.com/' + redirect_link + '?subscription=true&offer=' + offer_slug_link
+            }, 300);
+          } else {
+            setTimeout(function () {
+              window.location = 'https://www.buymeacoffee.com/' + redirect_link + '?subscription=true'
+            }, 300);
+          }
+        } else if (redirect_to_post != undefined && redirect_to_post != '') {
+          setTimeout(function () {
+            window.location = redirect_to_post
+          }, 300);
+        } else {
+          if (result.is_link_signup == 'TRUE') {
+            setTimeout(function () {
+              window.location = 'https://www.buymeacoffee.com/shop?link=' + result.coffee_link_id;
+            }, 300);
+          } else if (from_page != '') {
+            if (from_page == 'https://www.buymeacoffee.com/') {
+              if (result.user_role == 2) {
+                setTimeout(function () {
+                  window.location = 'https://www.buymeacoffee.com/home';
+                }, 300);
+              } else {
+                setTimeout(function () {
+                  window.location = 'https://www.buymeacoffee.com/dashboard';
+                }, 300);
+              }
+            } else {
+              setTimeout(function () {
+                window.location = from_page;
+              }, 300);
+            }
+          } else {
+            if (result.user_role == 2) {
+              setTimeout(function () {
+                window.location = 'https://www.buymeacoffee.com/home';
+              }, 300);
+            } else {
+              setTimeout(function () {
+                window.location = 'https://www.buymeacoffee.com/dashboard';
+              }, 300);
+            }
+          }
+        }
+      }, 800);
+    }, 1000);
+  } else if (result.status == 'LOGIN_FAIL') {
+    if (result.errors.password && result.errors.password == 'VERIFIFCATION_REQUIRED') {
+      sendMagicLink('send');
+    } else {
+      $('.login-btn .circle-loader').hide();
+      $('.login-btn span').show();
+      if (result.errors.password == 'Incorrect email address or password.') {
+        $('.login-error-tip').show();
+        $('.login-error-span').html(result.errors.password + " <a class='color-1B2-i' onClick='showStep(1,4," + '"login"' + ")' href='javascript:void(null)'>Forgot password?</a>");
+      } else {
+        $('.login-error-tip').show();
+        $('.login-error-span').text(result.errors.password);
+      }
+    }
+  }
+}
+
+function resetPwd() {
+  var csrfHash = $('input[name=bmc_csrf_token]').val();
+  var email = $('#reset-email').val();
+  $.ajax({
+    dataType: 'json',
+    url: "https://www.buymeacoffee.com/auth/forgot_password_step_2",
+    beforeSend: beforeReset,
+    success: afterReset,
+    data: {p_email: email, bmc_csrf_token: csrfHash},
+    type: 'POST'
+  });
+}
+
+function beforeReset() {
+  $('#login-reset-error-page').html('');
+  $('.error-tip').hide();
+  $('.reset-btn .circle-loader').show();
+  $('.reset-btn span').hide();
+}
+
+function afterReset(result) {
+  $('#csrf').val(result.csrfHash);
+  if (result.status == 'OK') {
+    setTimeout(function () {
+      $('.reset-btn .circle-loader').toggleClass('load-complete');
+      setTimeout(function () {
+        $('.reset-btn .checkedmark').toggle();
+      }, 150);
+      setTimeout(function () {
+        $('.reset-btn .circle-loader').hide();
+        $('.reset-btn span').show();
+        $('#before-reset').hide();
+        $('#after-reset').show();
+      }, 800);
+    }, 1000);
+  } else if (result.status == 'VALIDATION_ERROR') {
+    $('.reset-btn .circle-loader').hide();
+    $('.reset-btn span').show();
+    error = result.errors;
+    showErrors(error);
+    $('input[name=bmc_csrf_token]').val(result.csrfHash);
+  }
+}
+
+$('#signup-email').focus(function () {
+  $('.open-on-focus-signup').slideDown(300);
+});
+$('#login-email').focus(function () {
+  $('.open-on-focus-login').slideDown(300);
+});
+
+function checkIfUserExistSignup() {
+  var csrfHash = $('input[name=bmc_csrf_token]').val();
+  $('.signup-alert').text('');
+  $('.error-tip').hide();
+  var email = $('#signup-email').val();
+  var password = $('#signup-password').val();
+  if (email == '' || password == '') {
+    if (email == '') {
+      $('.signup-email-span').text('Please enter the email address');
+      $('.signup-email-tip').show();
+    }
+    if (password == '') {
+      $('.signup-password-span').text('Please enter the password');
+      $('.signup-password-tip').show();
+    }
+  } else {
+    $.ajax({
+      dataType: 'json',
+      url: "https://www.buymeacoffee.com/auth/validate_email_and_password",
+      beforeSend: beforeEmailCheckSignup,
+      success: afterEmailCheckSignup,
+      data: {email: email, password: password, bmc_csrf_token: csrfHash},
+      type: 'POST'
+    });
+  }
+}
+
+function beforeEmailCheckSignup() {
+  $('.check-signup-btn .circle-loader').show();
+  $('.check-signup-btn span').hide();
+  removeErrors(error);
+  $('.signup-email-tip').hide();
+  $('.signup-email-span').text('');
+}
+
+function afterEmailCheckSignup(data) {
+  $('#csrf').val(data.csrfHash);
+  if (data.status == 'SUCCESS') {
+    setTimeout(function () {
+      $('.check-signup-btn .circle-loader').toggleClass('load-complete');
+      setTimeout(function () {
+        $('.check-signup-btn .checkedmark').toggle();
+      }, 150);
+      setTimeout(function () {
+        $('.check-signup-btn .circle-loader').hide();
+        $('.check-signup-btn span').show();
+      }, 800);
+    }, 1000);
+    showStep(2, 3, 'signup');
+  } else {
+    if (data.errors) {
+      $('.check-signup-btn .circle-loader').hide();
+      $('.check-signup-btn span').show();
+      if (data.errors.password) {
+        $('.signup-password-tip').show();
+        $('.signup-password-span').html(data.errors.password);
+      }
+      if (data.errors.email) {
+        $('.check-signup-btn .circle-loader').hide();
+        $('.check-signup-btn span').show();
+        $('.signup-email-tip').show();
+        if (data.errors.email == 'Sorry, this email already exists') {
+          $('.signup-email-span').html("It looks like you're already have an account here. <a class='color-1B2-i' href='https://www.buymeacoffee.com/login'>Login here</a>.");
+        } else {
+          $('.signup-email-span').html(data.errors.email);
+        }
+      }
+    }
+  }
+}
+
+function showStep(from, to, type) {
+  if (from == 0) {
+    $('.step-auth').hide();
+  } else {
+    $('.step-' + from + '-' + type).hide();
+  }
+  $('.step-' + to + '-' + type).show();
+  $('.login-error-tip').hide();
+  $('.login-error-span').text('');
+}
+
+$('input[name="modal-user-role"]').click(function () {
+  var val = $(this).val();
+  if (val == 1) {
+    showStep(3, 4, 'signup');
+    var email = $('#signup-email').val();
+    $('#entered-email').val(email + '.');
+  } else {
+    $('#modal-user-role-1').attr('disabled', true);
+    signup('supp-signup');
+    never_allow_to_close('signup');
+  }
+});
+var slug_started = 0;
+$(document).on('keyup', '#modal_project_slug', function () {
+  $('.project_slug-tip').hide();
+  $('.project_slug-span').text('');
+  var slug = $(this).val();
+  $('#preview-slug').text(slug);
+  var csrfHash = $('input[name=bmc_csrf_token]').val();
+  if (slug.length > 3) {
+    slug_started = 1;
+    $('.loader-26').show();
+    $('.slug-avail-tick').hide();
+    $('#modal_project_slug').removeClass('success-input error-input');
+    $('#slug-checking').val(1);
+    $.ajax({
+      dataType: 'json',
+      url: "https://www.buymeacoffee.com/api/check_availability",
+      success: aftercheckslug,
+      data: {project_slug: slug, bmc_csrf_token: csrfHash},
+      type: 'POST'
+    });
+  } else if (slug.length > 0) {
+    if (slug_started == 1) {
+      $('.loader-26').hide();
+      $('.slug-avail-tick').hide();
+      $('#modal_project_slug').removeClass('success-input').addClass('error-input');
+      $('.project_slug-tip').show();
+      $('.project_slug-span').text('Username must be longer than 3 characters');
+    }
+  } else {
+    $('.loader-26').hide();
+    $('.project_slug-tip').hide();
+    $('.project_slug-span').text('');
+    $('#modal_project_slug').removeClass('success-input error-input');
+  }
+
+  function aftercheckslug(result) {
+    $('#csrf').val(result.csrfHash);
+    $('.loader-26').hide();
+    $('#slug-checking').val(0);
+    if (result.status == 'SUCCESS') {
+      $('.slug-avail-tick').show();
+      $('#modal_project_slug').addClass('success-input').removeClass('error-input');
+      $('#slug_taken').val(0);
+    } else {
+      $('.slug-avail-tick').hide();
+      $('#modal_project_slug').removeClass('success-input').addClass('error-input');
+      $('.project_slug-tip').show();
+      $('#slug_taken').val(1);
+      if (result.errors) {
+        $('.project_slug-span').text(result.errors.project_slug);
+      } else {
+        $('.project_slug-span').text(result.error);
+      }
+    }
+  }
+});
+
+function signup(elem) {
+  var csrfHash = $('input[name=bmc_csrf_token]').val();
+  $('.project_slug-tip').hide();
+  $('.project_slug-span').text('');
+  var email = $('#signup-email').val();
+  var password = $('#signup-password').val();
+  var user_role = $('input[name="modal-user-role"]:checked').val();
+  var slug = $('#modal_project_slug').val();
+  var slug_taken = $('#slug_taken').val();
+  var allOk = 1;
+  if (user_role == 1) {
+    if (slug == '') {
+      $('.project_slug-tip').show();
+      $('.project_slug-span').text('Username can’t be empty.');
+      slug_taken = 0;
+      allOk = 0;
+    } else if (slug.length <= 3) {
+      $('#modal_project_slug').removeClass('success-input').addClass('error-input');
+      $('.project_slug-tip').show();
+      $('.project_slug-span').text('Username must be longer than 3 characters');
+      allOk = 0;
+    }
+    if ($('#slug-checking').val() == 1) {
+      allOk = 0;
+    }
+    if (slug_taken == 1) {
+      allOk = 0;
+    }
+  }
+  if (allOk == 1) {
+    $.ajax({
+      dataType: 'json',
+      url: "https://www.buymeacoffee.com/auth/complete_signup",
+      beforeSend: beforesignup,
+      success: aftersignup,
+      data: {email: email, password: password, project_slug: slug, user_role: user_role, bmc_csrf_token: csrfHash},
+      type: 'POST'
+    });
+  } else {
+    $('.loader-26').hide();
+    $('.slug-avail-tick').hide();
+    $('#modal_project_slug').removeClass('success-input').addClass('error-input');
+    $('.project_slug-tip').show();
+    if (slug_taken == 1) {
+      $('.project_slug-span').text('The username ' + slug + ' is already taken.');
+    }
+  }
+
+  function beforesignup() {
+    $('#' + elem + ' .circle-loader').show();
+    $('#' + elem + ' span').hide();
+    removeErrors(error);
+  }
+
+  function aftersignup(result) {
+    $('#csrf').val(result.csrfHash);
+    if (result.status == 'OK') {
+      sendMagicLinkSignup('send', elem);
+    } else if (result.status == 'VALIDATION_ERROR') {
+      $('#modal-user-role-1').attr('disabled', false);
+      $('#' + elem + ' .circle-loader').hide();
+      $('#' + elem + ' span').show();
+      error = result.errors;
+      showErrors(error);
+      if (result.errors.email) {
+        $('.signup-email-tip').show();
+        $('.signup-email-span').text(result.errors.email);
+      } else {
+        $('.signup-email-tip').hide();
+        $('.signup-email-span').text('');
+      }
+    }
+  }
+}
+
+function sendMagicLinkSignup(type, elem) {
+  var csrfHash = $('input[name=bmc_csrf_token]').val();
+  var email = $('#signup-email').val();
+  var otp_status_modal = $('#otp-sending-modal').val();
+  var otp_status = $('#otp-sending').val();
+  if (otp_status_modal == 0 || otp_status == 0) {
+    if ($('#otp-send').val() == 0 || type == 'resend') {
+      $('#otp-sending-modal').val(1);
+      $('#otp-sending').val(1);
+      $.ajax({
+        dataType: 'json',
+        url: "https://www.buymeacoffee.com/auth/generate_otp",
+        beforeSend: beforeOtpEmailSignup(type),
+        success: afterOtpEmailSignup,
+        data: {email: email, is_signup: 1, bmc_csrf_token: csrfHash},
+        type: 'POST'
+      });
+    } else {
+      showStep(0, 5, 'signup');
+      never_allow_to_close('signup');
+    }
+  }
+
+  function beforeOtpEmailSignup(type) {
+    if (type == 'resend') {
+      $('#resend-btn').addClass('rotating');
+    }
+    $('#' + elem + ' .circle-loader').show();
+    $('#' + elem + ' span').hide();
+  }
+
+  function afterOtpEmailSignup(result) {
+    $('#otp-sending-modal').val(0);
+    $('#otp-sending').val(0);
+    $('#csrf').val(result.csrfHash);
+    setTimeout(() => {
+      $('#resend-btn').removeClass('rotating');
+    }, 3000);
+    if (result.status == 'OK') {
+      showStep(0, 5, 'signup');
+      never_allow_to_close('signup');
+      $('.digit-wrapper .digit-input:first-child').focus();
+      if (type == 'resend') {
+        $('.resend-otp-wrapper').remove();
+        $('.opt-sent-text').show();
+        setTimeout(() => {
+          $('.opt-sent-text').text('');
+        }, 1300);
+      }
+    } else {
+      console.log(result.error);
+    }
+  }
+}
+
+function saveDigitCode_signup() {
+  var csrfHash = $('input[name=bmc_csrf_token]').val();
+  var email = $('#signup-email').val();
+  var user_role = $('input[name="modal-user-role"]:checked').val();
+  var otp = '' + $('#signup-otp-digit-1').val() + $('#signup-otp-digit-2').val() + $('#signup-otp-digit-3').val() + $('#signup-otp-digit-4').val() + $('#signup-otp-digit-5').val() + $('#signup-otp-digit-6').val();
+  $.ajax({
+    dataType: 'json',
+    url: "https://www.buymeacoffee.com/auth/login_with_otp",
+    beforeSend: beforeSaveOtpSignup,
+    success: afterSaveOtpSignup,
+    data: {email: email, otp: otp, bmc_csrf_token: csrfHash},
+    type: 'POST'
+  });
+
+  function beforeSaveOtpSignup() {
+    $('.signup-saveotp-btn .circle-loader').show();
+    $('.signup-saveotp-btn span').hide();
+    $('.signup-otp-error-span').text('');
+    $('.signup-otp-error-tip').hide();
+  }
+
+  function afterSaveOtpSignup(result) {
+    $('#csrf').val(result.csrfHash);
+    if (result.status == 'LOGIN_SUCCESS') {
+      setTimeout(function () {
+        $('.signup-saveotp-btn .circle-loader').toggleClass('load-complete');
+        setTimeout(function () {
+          $('.signup-saveotp-btn .checkedmark').toggle();
+        }, 150);
+        setTimeout(function () {
+          if (user_role == 1) {
+            window.location = "https://www.buymeacoffee.com/select-payment-mode";
+          } else {
+            window.location = "https://www.buymeacoffee.com/home";
+          }
+        }, 800);
+      }, 1000);
+    } else if (result.status == 'INVALID_OTP') {
+      $('.signup-otp-error-span').text('Invalid OTP');
+      $('.signup-otp-error-tip').show();
+      $('.signup-saveotp-btn .circle-loader').hide();
+      $('.signup-saveotp-btn span').show();
+    }
+  }
+}
+
+$(document).on('click', '.project_slug_check', function () {
+  $(this).parents('.slug-checker-wrapper').find('.placehooler-animation').hide();
+});
+$(document).on('click', '.placehooler-animation', function () {
+  $(this).hide();
+  $(this).parents('.slug-checker-wrapper').find('.project_slug_check').focus()
+});
+$('.open-login-modal').click(function () {
+  $('#myLoginModal').fadeIn(10).css({'display': 'flex'});
+  $('body').css({'padding-right': '16px'}).addClass('bmc-modal-open');
+});
+$('.open-signp-modal').click(function () {
+  if ($(this).hasClass('start-page-btn')) {
+    var project_slug_val = '';
+    project_slug_val = $('.project_slug_check').text();
+    $('#mySignupModal').fadeIn(10);
+    if ($('.project_slug_check').hasClass('success-input') && project_slug_val != '') {
+      $('#modal_project_slug').val(project_slug_val);
+      $('#modal_project_slug').addClass('success-input');
+      $('.slug-avail-tick').show();
+      $('#preview-slug').text(project_slug_val);
+    } else {
+      $('#modal_project_slug').val('');
+      $('#modal_project_slug').removeClass('success-input');
+      $('.slug-avail-tick').hide();
+      $('#preview-slug').text('');
+    }
+  } else {
+    $('#mySignupModal').fadeIn(10);
+  }
+});
+$('.auth-close-btn').click(function () {
+  $('#myLoginModal').hide();
+  $('#mySignupModal').hide();
+  $('body').removeClass('bmc-modal-open');
+});
+$('.openLoginModal').click(function () {
+  if ($('#login-page').val() == 0) {
+    $('#mySignupModal').hide();
+    $('#myLoginModal').show();
+  } else {
+    $('#mySignupModal').modal('hide');
+  }
+});
+$(document).keyup(function (e) {
+  if (e.keyCode === 27) {
+    if ($('#myLoginModal').css('display') == 'block') {
+      $('#myLoginModal').modal('toggle');
+      $('#myLoginModal').hide();
+      $('body').removeClass('bmc-modal-open');
+    }
+    if ($('#mySignupModal').css('display') == 'block') {
+      $('#mySignupModal').modal('toggle');
+      $('#mySignupModal').hide();
+    }
+  }
+});
+$('.close-auth-modal').click(function () {
+  closeLoginModal();
+});
+$('.auth-backdrop').click(function () {
+  closeLoginModal();
+});
+$(document).keydown(function (event) {
+  if (event.keyCode == 27) {
+    closeLoginModal();
+  }
+});
+
+function closeLoginModal() {
+  $('#myLoginModal').hide();
+  $('.modal-backdrop').hide();
+  $('body').removeClass('bmc-modal-open').css({'padding-right': 0});
+}
+
+$(document).mouseup(function (e) {
+  var never_close = $('#never-close').val();
+  var never_close_modaltype = $('#never-close').data('type');
+  var close_modal = $(".open-modal-bg");
+  if (!close_modal.is(e.target) && close_modal.has(e.target).length === 0 && never_close == 0) {
+    if (never_close_modaltype == 'login') {
+      if ($('#is_home_papage').val() == '1') {
+        $('#myLoginModal').hide();
+        $('.modal-backdrop').hide();
+      } else {
+        $('#myLoginModal').modal('hide');
+      }
+      $('body').removeClass('bmc-modal-open');
+    }
+    if (never_close_modaltype == 'signup') {
+      $('#mySignupModal').hide();
+      $('.modal-backdrop').hide();
+    }
+    if (never_close_modaltype == '') {
+      if ($('#is_home_papage').val() == '1') {
+        $('#myLoginModal').hide();
+        $('#mySignupModal').hide();
+        $('.modal-backdrop').hide();
+      } else {
+        $('#myLoginModal').modal('hide');
+      }
+      $('body').removeClass('bmc-modal-open');
+    }
+    $('#myLoginModal').hide();
+    $('.modal-backdrop').hide();
+    $('body').removeClass('bmc-modal-open');
+  } else {
+    if (never_close_modaltype == 'login') {
+      $('#myLoginModal').show();
+    }
+    if (never_close_modaltype == 'signup') {
+      $('#mySignupModal').show();
+    }
+  }
+  var close_modal = $("#openMobDropdown");
+  if (!close_modal.is(e.target) && close_modal.has(e.target).length === 0) {
+    $('.bmc-dropdown-new').removeClass('active');
+    $('.bar').removeClass('change');
+  }
+  var close_modal = $(".bmc-open-btn");
+  if (!close_modal.is(e.target) && close_modal.has(e.target).length === 0) {
+    $('.bmc-open-btn').removeClass('change');
+  }
+  checkSlugWrapper('slug-checker-wrapper-mob');
+  checkSlugWrapper('slug-checker-wrapper-desk');
+
+  function checkSlugWrapper(parent) {
+    var $parent = $('#' + parent);
+    if ($parent.find('.project_slug_check').val() == '') {
+      $parent.find('.side-slug-avail-tick').hide();
+      $parent.find('.side-slug-unavail-tick').hide();
+      if ($parent.find('.placehooler-animation').css('display') == 'none') {
+        $parent.find('.placehooler-animation').css({'border-right': '1px solid black'});
+        $parent.find('.placehooler-animation').show();
+      }
+      $parent.find('.placehooler-animation').addClass('focus');
+      setTimeout(() => {
+        $parent.find('.placehooler-animation').css({'border-right': 'transparent'});
+      }, 2000);
+    } else {
+      $parent.find('.placehooler-animation').hide();
+    }
+  }
+});</script>
+<script>$('.dropdown-el').click(function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  $(this).toggleClass('expanded');
+  $('#' + $(e.target).attr('for')).prop('checked', true);
+});
+$(document).click(function () {
+  $('.dropdown-el').removeClass('expanded');
+});
+$('.dropdown-toggle').click(function () {
+  $(this).parent('dropup').toggleClass('open');
+  $(this).parent('dropdown').toggleClass('open');
+});</script>
+<script>function coffeeLinkClose() {
+  document.cookie = "test=1";
+}</script>
+<script>$(".menu li").hover(function () {
+  $(this).siblings().find(".right-pagelink").removeClass("hovered");
+  $(this).find(".right-pagelink").addClass("hovered");
+}, function () {
+  $(this).find(".right-pagelink").removeClass("hovered");
+});
+$(document).ready(function () {
+  img_lazy_load();
+});</script>
+<script>var error = null;
+
+function showErrors(errors) {
+  for (var p in errors) {
+    if (errors.hasOwnProperty(p)) {
+      $('.' + p + '-span').html(errors[p]);
+      $('.' + p + '-span').parents('.error-tip').css('display', 'block');
+    }
+  }
+}
+
+function removeErrors(errors) {
+  for (var p in errors) {
+    if (errors.hasOwnProperty(p)) {
+      $('.' + p + '-span').html('');
+      $('.' + p + '-span').parents('.error-tip').css('display', 'none');
+    }
+  }
+}
+
+function showCoffeeLinkErrors(errors, pos) {
+  for (var p in errors) {
+    if (errors.hasOwnProperty(p)) {
+      $('.' + p + pos + '-span').html(errors[p]);
+      $('.' + p + pos + '-span').parent('.error-tip').css('display', 'block');
+    }
+  }
+}
+
+function removeCoffeeLinkErrors(errors, pos) {
+  for (var p in errors) {
+    if (errors.hasOwnProperty(p)) {
+      $('.' + p + pos + '-span').html('');
+      $('.' + p + pos + '-span').parent('.error-tip').css('display', 'none');
+    }
+  }
+}
+
+function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"), results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}</script>
+<script>$(".dash-input").click(function () {
+  $(".login-label").css("color", "rgb(218, 218, 218)");
+  $(this).prev(".login-label").css("color", "rgb(246, 134, 33)");
+});</script>
+<script>$('.bmc-open-btn').click(function () {
+  $('.bmc-collapse').fadeToggle(500);
+});</script>
+<script>function myFunction(x) {
+  x.classList.toggle("change");
+}
+
+$(document).on('click', '#openMobDropdown', function () {
+  $('.bmc-dropdown-new').toggleClass('active');
+  $('.bar').toggleClass('change');
+});</script>
+<script>$(window).scroll(function () {
+  var scroll = $(window).scrollTop();
+  if (scroll > 0) {
+    $(".waterfall-shadow").removeClass("active");
+  } else {
+    $(".waterfall-shadow").addClass("active");
+  }
+});</script>
+</html>
+<script type="text/javascript"></script>
+</body>
+</html>
