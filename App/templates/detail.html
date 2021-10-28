@@ -32,3 +32,11 @@
   </table>
   </div>
 {% endblock %}
+
+{% block prev_page %}
+    {{ url_for('house.detail', house_id=house_id, page=paginate.prev_num) }}
+{% endblock %}
+
+{% block next_page %}
+  {{ url_for('house.detail', house_id=house_id, page=paginate.next_num) }}
+{% endblock %}

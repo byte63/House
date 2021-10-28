@@ -1,6 +1,9 @@
 from App.ext import db
 
 
+# class User(db.Model):
+#     __tablename__ = 'user'
+
 class HouseListing(db.Model):
     __tablename__ = 'house_listing'
     __table_args__ = (

@@ -15,11 +15,11 @@
 <nav aria-label="...">
   <ul class="pager">
     {% if paginate.has_prev %}
-      <li><a href="/{{ paginate.prev_num }}">Previous</a></li>
+      <li><a href="{% block prev_page %}{% endblock %}">Previous</a></li>
     {% endif %}
 
     {% if paginate.has_next %}
-      <li><a href="/{{ paginate.next_num }}">Next</a></li>
+      <li><a href="{% block next_page %}{% endblock %}">Next</a></li>
     {% endif %}
   </ul>
 </nav>

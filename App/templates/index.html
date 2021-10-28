@@ -16,9 +16,9 @@
     <th>状态</th>
     <th>价格</th>
     <th>性质</th>
-    {#    <th>地址</th>#}
     <th>户型</th>
     <th>地区</th>
+    <th>趋势</th>
 
     {% for house in houses %}
       <tr>
@@ -26,11 +26,19 @@
         <td>{{ house.status }}</td>
         <td>{{ house.price }}</td>
         <td>{{ house.nature }}</td>
-        {#        <td>{{ house.address }}</td>#}
         <td>{{ house.hx }}</td>
         <td>{{ house.area_name }}</td>
+        <td><a href="/detail/{{ house.house_id }}" class="button">详情</a></td>
       </tr>
     {% endfor %}
   </table>
 </div>
+{% endblock %}
+
+{% block prev_page %}
+    {{ url_for('house.listing', page=paginate.prev_num) }}
+{% endblock %}
+
+{% block next_page %}
+    {{ url_for('house.listing', page=paginate.next_num) }}
 {% endblock %}
