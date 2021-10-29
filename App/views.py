@@ -1,7 +1,7 @@
 from flask.blueprints import Blueprint
-from flask import render_template, redirect, url_for, abort, request
+from flask import render_template, redirect, url_for, abort, request, jsonify
 
-from App.models import HouseListing
+from App.models import HouseListing, User
 
 house = Blueprint('house', __name__)
 
@@ -40,3 +40,53 @@ def detail(house_id, page=1):
         return abort(404)
     title = houses[0].house_name
     return render_template("info.html", paginate=paginate, houses=houses, title=title, house_id=house_id)
+
+
+@house.route("/test")
+def test():
+    return render_template("login.html")
+
+
+@house.route("/check_user", methods=["POST"])
+def check_user():
+    user_name = request.form.get("user_name")
+    return jsonify({"status": False})
+
+
+@house.route("/register", methods=["POST"])
+def register():
+    email = request.json.get("email")
+    password = request.json.get("password")
+    if not email or not password:
+        return jsonify({"status": 400, 'msg': "缺少必要参数!"}), 400
+    user = User()
+    user.email = email
+    user.password = password
+    if not user.save():
+        return jsonify({"status": 401, "msg": "注册失败!"}), 401
+    return jsonify({"status": 200, "msg": "注册成功!"}), 200
+
+
+def get_user(email):
+    user = User.query.filter(User.email == email).first()
+    if not user:
+        return False
+    return user
+
+
+@house.route("/login", methods=["POST"])
+def login():
+    email = request.form.get("email")
+    password = request.form.get("password")
+    if not email or not password:
+        return jsonify({"status": 400, 'msg': "请检查用户名密码!"}), 200
+
+    user = get_user(email)
+    if not user:
+        return jsonify({"status": 400, 'msg': "请检查用户名密码!"}), 200
+
+    if not user.check_password(password):
+        return jsonify({"status": 400, 'msg': "请检查用户名密码!"}), 200
+
+    return jsonify({"status": 200, 'msg': "登陆成功!"}), 200
+    # return redirect(url_for('house.listing', page=1)), 200

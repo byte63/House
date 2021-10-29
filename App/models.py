@@ -1,8 +1,32 @@
 from App.ext import db
+from werkzeug.security import check_password_hash, generate_password_hash
 
 
-# class User(db.Model):
-#     __tablename__ = 'user'
+class User(db.Model):
+    __tablename__ = 'user'
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(128), nullable=False, unique=True)
+    _password = db.Column(db.String(256))
+
+    @property
+    def password(self):
+        raise Exception("Can't access")
+
+    @password.setter
+    def password(self, val):
+        self._password = generate_password_hash(val)
+
+    def check_password(self, val):
+        return check_password_hash(self._password, password=val)
+
+    def save(self):
+        try:
+            db.session.add(self)
+            db.session.commit()
+            return True
+        except Exception as e:
+            return False
+
 
 class HouseListing(db.Model):
     __tablename__ = 'house_listing'
