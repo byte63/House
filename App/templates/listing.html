@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<header class="header">
+  <div class="container header__container o__ltr" dir="ltr">
+    <div class="content">
+      <div class="mo o__centered o__reversed header__meta_wrapper">
+        <div class="mo__body header__site_name">
+          <div class="header__logo">
+{#            <a href="/en/">#}
+{#              <img alt="Knowledge Base | Buy Me a Coffee"#}
+{#                   src="https://downloads.intercomcdn.com/i/o/234105/0d29fbdf17e257cdfc2ba1ba/7103925065c5e9bd6ac7ac9efd453fd7.png"/>#}
+{#            </a>#}
+          </div>
+        </div>
+      </div>
+      <h1 class="header__headline">Knowledge Base</h1>
+      <form action="{{ url_for('house.search') }}" autocomplete="off" class="header__form search">
+        <input type="text" autocomplete="off" class="search__input js__search-input o__ltr"
+               placeholder="Search for articles..." tabindex="1" name="house_name" value="">
+      </form>
+    </div>
+  </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}
+  {% for house in houses %}
+    <div class="container">
+      <div class="content educate_content">
+        <section class="section">
+          <div class="g__space">
+            <a href="{{ url_for('house.detail', house_id=house.house_id, page=1) }}" class="paper ">
+              <div class="collection o__ltr">
+                <div class="collection__photo">
+                </div>
+                <div class="collection_meta" dir="ltr">
+                  <h2 class="t__h3 c__primary">{{ house.house_name }}</h2>
+                  <p class="paper__preview">{{ house.address[:22] }}</p>
+                  <div class="avatar">
+                    <div class="avatar__info">
+                      <div>
+                        <span>{{ house.hx }}</span>
+                        <br>
+                        <span>状态：{{ house.status }}  性质：{{ house.nature }}  区域：{{ house.area_name }}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
+
+
+{% block prev_page %}
+    {{ url_for('house.listing', page=paginate.prev_num) }}
+{% endblock %}
+
+{% block next_page %}
+    {{ url_for('house.listing', page=paginate.next_num) }}
+{% endblock %}

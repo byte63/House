@@ -1,14 +1,9 @@
 from flask.blueprints import Blueprint
-from flask import render_template, redirect, url_for, abort
+from flask import render_template, redirect, url_for, abort, request
 
 from App.models import HouseListing
 
 house = Blueprint('house', __name__)
-
-
-@house.errorhandler(404)
-def page_not_found(e):
-    return render_template('404.html'), 404
 
 
 @house.route("/")
@@ -21,7 +16,15 @@ def listing(page=None):
     paginate = HouseListing.query.filter_by(create_date='2021-10-22').paginate(page=page, per_page=10, error_out=False)
     houses = paginate.items
     areas = HouseListing.query.with_entities(HouseListing.area_name, HouseListing.area_id).group_by(HouseListing.area_name, HouseListing.area_id).all()
-    return render_template("index.html", houses=houses, paginate=paginate, areas=areas)
+    return render_template("listing.html", houses=houses, paginate=paginate, areas=areas)
+
+
+@house.route("/search")
+def search():
+    house_name = request.args.get("house_name") or ""
+    paginate = HouseListing.query.filter_by(create_date='2021-10-22', house_name=house_name).paginate(page=1, per_page=10, error_out=False)
+    houses = paginate.items
+    return render_template("listing.html", paginate=paginate, houses=houses)
 
 
 @house.route('/detail/<int:house_id>')
@@ -36,11 +39,4 @@ def detail(house_id, page=1):
     if not houses:
         return abort(404)
     title = houses[0].house_name
-    return render_template("detail.html", paginate=paginate, houses=houses, title=title, house_id=house_id)
-
-
-@house.route("/filter")
-def filters():
-    pass
-
-
+    return render_template("info.html", paginate=paginate, houses=houses, title=title, house_id=house_id)

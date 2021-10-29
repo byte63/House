@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="row creator-pg-container lg12-w-100">
+    <div class="col-xs-12 p-0 before-992-mt0 m-b-100 xs-m-b-0" id="creator-page-starts">
+      <div class="creator-pg-bg-mob col-xs-12 col-md-cp-content sm-only-p-0 orange-page-color xs-p-b-50 ">
+        <div class="xs-p-0 before-992-mt45 ">
+          <div class="p-relative bio-sec br-r-4 overflow-h bg-fff bg-fff-bx-shdw ">
+            <div class="pd-t-24 pd-b-24">
+              <div class="xs-detail-spacing p-relative pd-l-24 pd-r-24 p-relative xs-pd-l-16 xs-pd-r-16 show-full-story-main"
+                   style="">
+                <div class="text-fs-16 av-roman clr-dark word-break bio-para-creator ln-h-25 full-pro-desc">
+                  {{ houses[0].house_name }}
+                </div>
+                <div class="text-fs-16 av-roman clr-dark word-break bio-para-creator ln-h-25 full-pro-desc">
+                  {{ houses[0].address }}
+                </div>
+                <div class="text-fs-16 av-roman clr-dark word-break bio-para-creator ln-h-25 full-pro-desc">
+                  {{ houses[0].hx }}
+                </div>
+                <div class="text-fs-16 av-roman clr-dark word-break bio-para-creator ln-h-25 full-pro-desc">
+                  {{ houses[0].desc }}
+                </div>
+                <div style="display: none;" class="gradient-your-story"></div>
+                <p style="display: none;"
+                   class="read-more-story pd-l-24 p-absolute av-roman text-fs-16 clr-dark text-decoration-ul read-full-story c-pointer pd-t-12">
+                  Show more</p>
+              </div>
+            </div>
+          </div>
+
+          {% for house in houses %}
+                      <div class="col-xs-12 p-0 creator-page xs-m-t-0">
+            <div class="hidden-tabs recent-section publicPage-wrapper" style="">
+              <div style="" class="supp-data-on-cp">
+                <div class="clr-grey av-heavy text-fs-14 ln-h-25 mg-b-24 ltr-sp-1 pd-t-32">{{ house.create_date }}</div>
+                <div id="recent-section">
+                  <div class="mg-b-16 p-relative donation-sec">
+
+                    <div class="ctr-update-each bg-fff bg-fff-bx-shdw br-r-4 pd-24 xs-pd-16 p-relative">
+                      <div class="supp-wrapper">
+                        <div class="flex xxs-w-90">
+                          <div class="mg-l-12  ">
+                            <div class="text-fs-16 clr-dark av-roman w-100 word-break ">
+                              <br>
+                              <span>
+                                {{ house.price }}
+                              </span>
+                              <br>
+                              <span>
+                                {{ house.status }}
+                              </span>
+                              <span>
+                                {{ house.nature }}
+                              </span>
+                              <span>
+                                {{ house.area_name }}
+                              </span>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          {% endfor %}
+
+
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" media="all" href="{{ url_for('static', filename='css/info.css') }}"/>
+{% endblock %}

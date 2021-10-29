@@ -1,16 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-direction="ltr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{% block title %}{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" media="all" href="{{ url_for('static', filename='css/listing.css') }}"/>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='house_icon.png') }}" type="image/x-icon">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-  <link rel="shortcut icon" href="{{ url_for('static', filename='house_icon.png') }}" type="image/x-icon">
+  {% block head %}
+  {% endblock %}
+  <style>
+    .header, .avatar__image-extra {
+      background-color: #000222;
+    }
+
+    .article a, .c__primary {
+      color: #000222;
+    }
+
+    .avatar__fallback {
+      background-color: #000222;
+    }
+
+    article a.intercom-h2b-button {
+      background-color: #000222;
+      border: 0;
+    }
+
+    .header {
+      background-image: url('https://downloads.intercomcdn.com/i/o/234349/724d0d260a2c8f16f160b7c0/c9259fe0582f9ee6e0875f140910c209.jpg');
+    }
+  </style>
+  <meta property="og:title" content="Knowledge Base | Buy Me a Coffee"/>
+  <meta name="twitter:title" content="Knowledge Base | Buy Me a Coffee"/>
+  <meta property="og:description" content="Knowledge Base"/>
+  <meta name="twitter:description" content="Knowledge Base"/>
 </head>
-<body>
+<body class="">
+
+{% block header %}
+{% endblock %}
 
 {% block content %}
-
 {% endblock %}
 
 <nav aria-label="...">
@@ -25,5 +58,34 @@
   </ul>
 </nav>
 
+<footer class="footer">
+  <div class="container">
+    <div class="content">
+      <div class="u__cf" dir="ltr">
+        <div class="footer__logo">
+          <a href="{{ url_for('house.listing', page=1) }}">
+            <img alt="Knowledge Base | Buy Me a Coffee"
+                 src="https://downloads.intercomcdn.com/i/o/234105/0d29fbdf17e257cdfc2ba1ba/7103925065c5e9bd6ac7ac9efd453fd7.png"/>
+          </a>
+        </div>
+        <div class="footer__links">
+          <ul class="footer__link-list footer__links__social">
+            <li class="footer__link footer__link__facebook" data-footer-link-type="facebook">
+              <a target="_blank" rel="nofollow noreferrer noopener" href="https://sz.lianjia.com/">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px"
+                     viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">  <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABaFBMVEUAuF8At18At2AAtmAAtWEAtGIAs2MAsmMAsmQAsWQAsWUAsGUAr2UAr2YArmYArWYJtmmN3bny+/eM3LkJtWkrwH3U8uX///8rvn4ArGdm0aH3/fpm0KMPuGuq5svF7dyq5MwPtG44xITf9ev7/v111asBsWV11azf9ew4wIgAq2cBtGN316vd9eo1woQ2wYbd9Op31K0BrWcXu3C669Wn5MoOtm2n48q66dYXs3UAqmfP8eH1/Plj0KBjzaHP7+LW8+Ypvn0pun/W8uYAqWc5w4c5v4kwwIEwvIQAqGcvu4MAqGgMr27w+vbY8ugAp2gwwIImt35ozaUasnYwv4IBqmgTr3IApmgDq2m/6dmf3sYwvoIitHsApWgDqmnG7N2k4MkwvoMDqWoasHcApGh/1rJAwoxAwY1AwI1Av41Avo1Avo5AvY4zuYYBpmmc3MT8/v3h9O0Ao2iI2bj6/fxwzaoAomgAoWgXvAE3AAAAAWJLR0QXC9aYjwAAAAd0SU1FB+UKHAcfMDTu+KAAAAGCSURBVDjLhdJnU8JAEAbgtYAgKIpKRFREERV7V8SOBRt27BUFe4e/774bHXIzDOyHTG6fdzJ3eyEq4iou4SrlMplMZrO5zGKxWsttNru9orKQSyCfI5DXHaR4VbXTWVNrdAcZvc6lcbnqDe4mgzd4NClPY9YloHtTM9DrxbPF9+8I6N7axuBvDwQ6/PzS2fXnQdK9uwft3j7sr38A0cEh8SCJD4/gw6Nj+v5941hNTMJDJN+f4kZ4Onv+mTA3ZuEI8P55OTdvnM/CIrfgEZL58WpJmZ9jGQH2CMl8ebWiuHuVW/AoyfwlYHT3GgLs6yT3g4Di7o1NbQseI7k/DmwrHgzu7O7BEeD75cC+6qGDQ/E4yf0joPrRsXYCj5P8Hxw4VTx0xtOGn5P8PwgoHrm41K7gHMD5OXCteCR6cyueIJkPB+7uuZLJZCr1wPX49PzyCucAzq/lqjd4gmQ+77kCH/BPkvl85Uh8/8A5oJ5f5h/T9wdPUwHnQH5PUwHPUAHP/AK7jIYX43h8zgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0xMC0yOFQwNzozMTo0OCswMDowMGUKfQYAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMTAtMjhUMDc6MzE6NDgrMDA6MDAUV8W6AAAAAElFTkSuQmCC"/>
+                </svg>
+              </a></li>
+          </ul>
+        </div>
+        <div class="footer__advert logo">
+          <img src="https://static.intercomassets.com/alexandria/assets/intercom-bb547b3ef910cffbfe901231035cc06163a5e3d8571e60411b77a8c3ca52927f.png"/>
+          <a href="{{ url_for('house.listing', page=1) }}">We run on House</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
