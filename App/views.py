@@ -21,6 +21,7 @@ def index():
 
 
 @house.route("/<int:page>")
+@login_require
 def listing(page=None):
     paginate = HouseListing.query.filter_by(create_date='2021-10-22').paginate(page=page, per_page=10, error_out=False)
     houses = paginate.items
@@ -29,6 +30,7 @@ def listing(page=None):
 
 
 @house.route("/search")
+@login_require
 def search():
     house_name = request.args.get("house_name") or ""
     paginate = HouseListing.query.filter_by(create_date='2021-10-22', house_name=house_name).paginate(page=1, per_page=10, error_out=False)
@@ -37,11 +39,13 @@ def search():
 
 
 @house.route('/detail/<int:house_id>')
+@login_require
 def _detail(house_id):
     return redirect(url_for("house.detail", house_id=house_id, page=1))
 
 
 @house.route("/detail/<int:house_id>/<int:page>")
+@login_require
 def detail(house_id, page=1):
     paginate = HouseListing.query.filter_by(house_id=house_id).paginate(page=page, per_page=10, error_out=False)
     houses = paginate.items
@@ -51,18 +55,15 @@ def detail(house_id, page=1):
     return render_template("info.html", paginate=paginate, houses=houses, title=title, house_id=house_id)
 
 
-@house.route("/test")
-def test():
-    return render_template("login.html")
-
-
 @house.route("/check_user", methods=["POST"])
+@login_require
 def check_user():
     user_name = request.form.get("user_name")
     return jsonify({"status": False})
 
 
 @house.route("/register", methods=["POST"])
+@login_require
 def register():
     email = request.json.get("email")
     password = request.json.get("password")
