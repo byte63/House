@@ -14,7 +14,7 @@ class Config:
     DEBUG = True
     TESTING = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SECRECT_KEY = "jonathan"
+    SECRET_KEY = "acdefghijklmnopqrst1234567890"
     HOST = '0.0.0.0'
 
 

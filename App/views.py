@@ -1,12 +1,21 @@
 from flask.blueprints import Blueprint
-from flask import render_template, redirect, url_for, abort, request, jsonify
+from flask import render_template, redirect, url_for, abort, request, jsonify, session
 
 from App.models import HouseListing, User
 
 house = Blueprint('house', __name__)
 
 
+def login_require(func):
+    def wrapper(*args, **kwargs):
+        if not session.get("name"):
+            return redirect(url_for("house.login"))
+        return func(*args, **kwargs)
+    return wrapper
+
+
 @house.route("/")
+@login_require
 def index():
     return redirect(url_for("house.listing", page=1))
 
@@ -74,8 +83,10 @@ def get_user(email):
     return user
 
 
-@house.route("/login", methods=["POST"])
+@house.route("/login", methods=["POST", "GET"])
 def login():
+    if request.method == "GET":
+        return render_template("login.html")
     email = request.form.get("email")
     password = request.form.get("password")
     if not email or not password:
@@ -88,5 +99,6 @@ def login():
     if not user.check_password(password):
         return jsonify({"status": 400, 'msg': "请检查用户名密码!"}), 200
 
+    session["name"] = email
     return jsonify({"status": 200, 'msg': "登陆成功!"}), 200
     # return redirect(url_for('house.listing', page=1)), 200

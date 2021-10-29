@@ -567,7 +567,7 @@
           </div>
         </div>
         <div class="header-btn-wrap">
-          <a href="javascript:void(null)" class="header-btn home-btn open-login-modal auth-link-title">Log in</a>
+          <a href="{{ url_for('house.login') }}" class="header-btn home-btn open-login-modal auth-link-title">Log in</a>
         </div>
       </div>
     </div>
@@ -772,7 +772,7 @@
           <div class="text-fs-18 clr-dark av-roman ln-h-30 mg-t-32">Here are some helpful links instead:</div>
           <div class="mg-t-24">
             <a class="inline-flex text-center flex-align-center br-r-47 bg-dark-05-h md-bmc-btn av-heavy text-fs-16 mg-r-8 xs-mg-b-8"
-               href="https://www.buymeacoffee.com/login"><span class="pd-l-8 pd-r-8">Login</span></a>
+               href="{{ url_for('house.login') }}"><span class="pd-l-8 pd-r-8">Login</span></a>
           </div>
         </div>
       </div>
