@@ -11,11 +11,12 @@ def login_require(func):
         if not session.get("name"):
             return redirect(url_for("house.login"))
         return func(*args, **kwargs)
+
+    wrapper.__name__ = func.__name__
     return wrapper
 
 
 @house.route("/")
-@login_require
 def index():
     return redirect(url_for("house.listing", page=1))
 
@@ -29,7 +30,7 @@ def listing(page=None):
     return render_template("listing.html", houses=houses, paginate=paginate, areas=areas)
 
 
-@house.route("/search")
+@house.route("/search",)
 @login_require
 def search():
     house_name = request.args.get("house_name") or ""
@@ -56,7 +57,6 @@ def detail(house_id, page=1):
 
 
 @house.route("/check_user", methods=["POST"])
-@login_require
 def check_user():
     user_name = request.form.get("user_name")
     return jsonify({"status": False})
@@ -102,4 +102,3 @@ def login():
 
     session["name"] = email
     return jsonify({"status": 200, 'msg': "登陆成功!"}), 200
-    # return redirect(url_for('house.listing', page=1)), 200
