@@ -1,3 +1,6 @@
+from datetime import timedelta
+
+
 def get_db_uri(dbinfo):
     engine = dbinfo.get("ENGINE")
     driver = dbinfo.get("DRIVER")
@@ -16,6 +19,7 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = "acdefghijklmnopqrst1234567890"
     HOST = '0.0.0.0'
+    PERMANENT_SESSION_LIFETIME = timedelta(minutes=60)
 
 
 class DevelopConfig(Config):

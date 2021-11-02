@@ -101,4 +101,5 @@ def login():
         return jsonify({"status": 400, 'msg': "请检查用户名密码!"}), 200
 
     session["name"] = email
+    session.permanent = True
     return jsonify({"status": 200, 'msg': "登陆成功!"}), 200
