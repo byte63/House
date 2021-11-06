@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  Index
+  Search
 {% endblock %}
 
 {% block header %}
@@ -63,9 +63,9 @@
 
 
 {% block prev_page %}
-    {{ url_for('house.listing', page=paginate.prev_num) }}
+    {{ url_for('house.search', page=paginate.prev_num, house_name=house_name) }}
 {% endblock %}
 
 {% block next_page %}
-    {{ url_for('house.listing', page=paginate.next_num) }}
+    {{ url_for('house.search', page=paginate.next_num, house_name=house_name) }}
 {% endblock %}

@@ -7,7 +7,7 @@ db = SQLAlchemy()
 migrate = Migrate()
 limiter = Limiter(
     key_func=get_remote_address,
-    default_limits=["5 per minute"]
+    default_limits=["10 per minute"]
 )
 
 
