@@ -36,8 +36,6 @@ def listing(page=None):
 @login_require
 def search(page=1):
     # paginate = HouseListing.query.filter(or_(HouseListing.house_name.like("%{}%".format(house_name)), HouseListing.area_name.like("%{}%".format(house_name)))).paginate(page=page, per_page=10, error_out=False)
-    # houses = paginate.items
-
     house_name = request.args.get("house_name") or ""
     houses = HouseListing.query.filter(or_(HouseListing.house_name.like("%{}%".format(house_name)), HouseListing.area_name.like("%{}%".format(house_name)))).distinct().all()
     _id = []
@@ -49,6 +47,7 @@ def search(page=1):
         _house_id.append(house.house_id)
 
     paginate = HouseListing.query.filter(HouseListing.id.in_(_id)).paginate(page=page, per_page=10, error_out=False)
+    houses = paginate.items
     return render_template("search.html", paginate=paginate, houses=houses, house_name=house_name)
 
 
