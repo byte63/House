@@ -26,7 +26,7 @@ def index():
 @login_require
 def listing(page=None):
     last_date = HouseListing.query.with_entities(HouseListing.create_date).order_by(HouseListing.create_date.desc()).first()
-    paginate = HouseListing.query.filter_by(create_date=last_date[0]).order_by(HouseListing.area_name.desc()).paginate(page=page, per_page=10, error_out=False)
+    paginate = HouseListing.query.filter_by(create_date=last_date[0]).order_by(HouseListing.area_name.asc()).paginate(page=page, per_page=10, error_out=False)
     houses = paginate.items
     areas = HouseListing.query.with_entities(HouseListing.area_name, HouseListing.area_id).group_by(HouseListing.area_name, HouseListing.area_id).all()
     return render_template("listing.html", houses=houses, paginate=paginate, areas=areas)
@@ -35,9 +35,20 @@ def listing(page=None):
 @house.route("/search/<int:page>",)
 @login_require
 def search(page=1):
+    # paginate = HouseListing.query.filter(or_(HouseListing.house_name.like("%{}%".format(house_name)), HouseListing.area_name.like("%{}%".format(house_name)))).paginate(page=page, per_page=10, error_out=False)
+    # houses = paginate.items
+
     house_name = request.args.get("house_name") or ""
-    paginate = HouseListing.query.filter(or_(HouseListing.house_name.like("%{}%".format(house_name)), HouseListing.area_name.like("%{}%".format(house_name)))).paginate(page=page, per_page=10, error_out=False)
-    houses = paginate.items
+    houses = HouseListing.query.filter(or_(HouseListing.house_name.like("%{}%".format(house_name)), HouseListing.area_name.like("%{}%".format(house_name)))).distinct().all()
+    _id = []
+    _house_id = []
+    for house in houses:
+        if house.house_id in _house_id:
+            continue
+        _id.append(house.id)
+        _house_id.append(house.house_id)
+
+    paginate = HouseListing.query.filter(HouseListing.id.in_(_id)).paginate(page=page, per_page=10, error_out=False)
     return render_template("search.html", paginate=paginate, houses=houses, house_name=house_name)
 
 
